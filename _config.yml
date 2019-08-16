@@ -15,15 +15,15 @@
 minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
 # Site Settings
-locale                   : "en-US"
-title                    : "Site Title"
+locale                   : "en"
+title                    : "Home"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
-name                     : "Your Name"
-description              : "An amazing website."
-url                      : # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+name                     : "Philipp Broniecki"
+description              : "Welcome to my website! I am a Senior Research Officer at the ESRC Business and Local Governmnet Data Research Centre."
+url                      : "https://philippbroniecki.github.io/"
 baseurl                  : # the subpath of your site, e.g. "/blog"
-repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
+repository               : # "philippbroniecki/philippbroniecki.github.io"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 logo                     : # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
 masthead_title           : # overrides the website title displayed in the masthead, use " " for no title
@@ -77,7 +77,7 @@ google:
   search_engine_id       : # YOUR_SEARCH_ENGINE_ID
   instant_search         : # false (default), true
 # SEO Related
-google_site_verification :
+google_site_verification : "googlea7e9fa9921e7f9d4"
 bing_site_verification   :
 yandex_site_verification :
 naver_site_verification  :
@@ -97,40 +97,46 @@ social:
   name                   : # If the user or organization name differs from the site's name
   links: # An array of links to social media profiles
 
+
 # Analytics
 analytics:
-  provider               : false # false (default), "google", "google-universal", "custom"
+  provider               : goolge # false (default), "google", "google-universal", "custom"
   google:
-    tracking_id          :
-    anonymize_ip         : # true, false (default)
+    tracking_id          : UA-108870254-1
 
 
 # Site Author
 author:
-  name             : "Your Name"
-  avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "I am an **amazing** person."
-  location         : "Somewhere"
-  email            :
+  name             : "Philipp Broniecki"
+  avatar           : "/assets/images/bio_photo1.png"
+  bio              : # "placeholdr"
+  location         : "<br>ESRC Business and Local Govern-<br> ment Data Research Centre<br> University of Essex <br> Parkside 2C <br> Wivenhoe Park<br> Colchester, CO4 3SQ"
+  email            : #"philipp.broniecki@essex.ac.uk"
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
-      # url: mailto:your.name@email.com
+      url: mailto:philipp.broniecki@essex.ac.uk
     - label: "Website"
       icon: "fas fa-fw fa-link"
       # url: "https://your-website.com"
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
-      # url: "https://twitter.com/"
+      url: "https://twitter.com/@PhilippBronieck"
     - label: "Facebook"
       icon: "fab fa-fw fa-facebook-square"
       # url: "https://facebook.com/"
     - label: "GitHub"
-      icon: "fab fa-fw fa-github"
-      # url: "https://github.com/"
+      icon: "fab fa-fw fa-github-square"
+      url: "https://github.com/philippbroniecki"
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
       # url: "https://instagram.com/"
+    - label: "Google Scholar"
+      icon: "ai ai-google-scholar-square"
+      url: "https://scholar.google.com/citations?view_op=list_works&hl=en&user=HxLVwXEAAAAJ&gmla=AJsN-F7eg_E5VM-R-W5CSPn4VPMchxMlPCjm5luTY3sxiKNQSF6phNMVEBx_pqpZyo0mHLDkX5PssRbWuHCjnPDXGBhZGj4r7oEHLBpcpY5-XoOUVyv7L8LE-plf7BlS6FGzSHxHQ2RG"
+    - label: "ORCID"
+      icon: "ai ai-orcid-square"
+      url: "https://orcid.org/0000-0001-9214-4404"
 
 # Site Footer
 footer:
