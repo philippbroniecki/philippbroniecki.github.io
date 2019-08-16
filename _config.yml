@@ -109,8 +109,8 @@ analytics:
 author:
   name             : "Philipp Broniecki"
   avatar           : "/assets/images/bio_photo1.png"
-  bio              : # "placeholdr"
-  location         : "<br>ESRC Business and Local Govern-<br> ment Data Research Centre<br> University of Essex <br> Parkside 2C <br> Wivenhoe Park<br> Colchester, CO4 3SQ"
+  bio              : "Senior Research Officer at the <a style='color: black;' href='http://www.blgdataresearch.org/'>ESRC Business and Local Government Data Research Centre</a>"
+  location         : "University of Essex"
   email            : #"philipp.broniecki@essex.ac.uk"
   links:
     - label: "Email"
