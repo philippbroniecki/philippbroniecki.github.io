@@ -107,9 +107,9 @@ analytics:
 
 # Site Author
 author:
-  name             : "Philipp Broniecki"
+  name             : "Philipp Christian Broniecki"
   avatar           : "/assets/images/bio_photo1.png"
-  bio              : "Senior Research Officer at the <a style='color: black;' href='http://www.blgdataresearch.org/'>ESRC Business and Local Government Data Research Centre</a>"
+  bio              : "Senior Research Officer at the <a style='color: black;' style='text-decoration: underline;' href='http://www.blgdataresearch.org/'>ESRC Business and Local Government Data Research Centre</a>"
   location         : "University of Essex"
   email            : #"philipp.broniecki@essex.ac.uk"
   links:
