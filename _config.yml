@@ -110,9 +110,12 @@ author:
   name             : "Philipp Christian Broniecki"
   avatar           : "/assets/images/bio_photo1.png"
   bio              : "Senior Research Officer at the <a style='color: black;' style='text-decoration: underline;' href='http://www.blgdataresearch.org/'>ESRC Business and Local Government Data Research Centre</a>"
-  location         : "University of Essex"
+  location         : #Essex \surl: "
   email            : #"philipp.broniecki@essex.ac.uk"
   links:
+    - label: "Google Maps"
+      icon: "fas fa-fw fa-thumbtack fa-lg"
+      url: https://www.google.com/maps/search/Block+C,+Unit+2+Parkside+Nesfield+Road+University+of+Essex+Wivenhoe+Park+Colchester+Essex+CO4+3SQ/@51.8798427,0.9416097,17z
     - label: "Email"
       icon: "fas fa-fw fa-envelope fa-lg"
       url: mailto:philipp.broniecki@essex.ac.uk
