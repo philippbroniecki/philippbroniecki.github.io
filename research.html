@@ -31,7 +31,7 @@ author_profile: true
 	<h2 id="publications"> Publications </h2>
 	
 	<p><strong>Power and transparency in political negotiations</strong><br/>
-	Online first in <em>European Union Politics</em>
+	in <em>European Union Politics</em> 
 	<button class="btn btn--inverse btn--small" onclick="showAbstract('powerandtransparency')">abstract</button>
 	<a href="https://journals.sagepub.com/doi/full/10.1177/1465116519870870" class="btn btn--inverse btn--small">article</a>
 	<a href="https://github.com/philippbroniecki/power_and_transparency" class="btn btn--inverse btn--small">replication material</a>
@@ -60,7 +60,7 @@ author_profile: true
 	
 	<h2 id="submitted"> Under Review </h2>
 	
-	<p><strong>Improved multilevel regression with post-stratification through optimal model selection</strong><br />
+	<p><strong>Improved multilevel regression with post-stratification through machine learning (autoMrP)</strong><br />
 	with <em><a href="https://lucasleemann.ch/">Lucas Leeman</a></em>
 	and <em><a href="http://www.retowuest.net/">Reto W&uuml;est</a></em>
 	<button class="btn btn--inverse btn--small" onclick="showAbstract('mrp')">abstract</button>
@@ -68,22 +68,44 @@ author_profile: true
 	<div id="mrp", style="display:none">
 	<p>
 	<blockquote style="text-align:justify">
-	Multilevel regression with post-stratification (MrP) has quickly become the gold standard for small area estimation problems. While the first MrP models did not include context-level information, current applications almost always make use of such information. When using MrP, there is an inherent problem of how to select the appropriate response model and, specifically, how to choose the optimal set of context-level variables. In this paper, we employ a number of approaches from the statistical learning literature to provide a systematic approach to estimating MrP models. We re-analyze 89 items from public opinion surveys in the US and demonstrate that our systematic approach outperforms selection of context-level variables based on researchers' prior knowledge even in the US, which has a rich tradition of public opinion research.
+	Multilevel regression with post-stratification (MrP) has quickly become the gold standard for small area estimation. While the first MrP models did not include context-level information, current applications almost always make use of such data. When using MrP, researchers are faced with three problems: how to select features, how to specify the functional form, and how to regularize the model parameters. These problems are especially important with regard to features included at the context level. We propose a systematic approach to estimating MrP models that addresses these issues by employing a number of machine learning techniques. We illustrate our approach based on 89 items from public opinion surveys in the US and demonstrate that our approach outperforms a standard MrP model, in which the choice of context-level variables has been informed by a rich tradition of public opinion research.
 	</blockquote>
 	</p></p>
 	</div>
 
 	<h2 id="workingpapers"> Working Papers </h2>
 	
-	<p><strong>Where euroskeptic parties diverge: Analyzing polarization in votes in the European Parliament</strong><br/>
+	<p><strong>The evolution of Eurosceptic contestation in the European Parliament</strong><br/>
+	with <em><a href="https://lukasobholzer.eu/">Lukas Obholzer</a></em> 
+	<button class="btn btn--inverse btn--small" onclick="showAbstract('AntiEU3')">abstract</button>
+	<div id="AntiEU3", style="display:none">
+	<p>
+	<blockquote style="text-align:justify">
+	We provide a comprehensive analysis of change in Eurosceptic contestation in the European Parliament from 1994 to 2019. Using novel preference data, we test whether increased Euroscepticism is driven by replacement or preference change. Replacement takes place when Members of the European Parliament are replaced by more Eurosceptic representatives. In contrast, when preferences of re-elected representatives become more Eurosceptic over time, we refer to within-individual preference change. We disaggregate by policy and furthermore, we test whether more &ldquo;extrme&rdquo; members of Eurosceptic parties are more likely to be re-elected in subsequent elections. Methodologically, we employ a Bayesian IRT model to estimate preferences that are comparable over legislative periods. Re-elected representatives' priors are set to the estimate from the previous term. This approach allows comparison over time and provides a measure of preference change: The difference between prior and posterior. We contribute to the growing literature on Euroscepticism in the European Union by providing insights into the question whether increased scepticism takes place &ldquo;top-down&rdquo; where legislators become more Eurosceptic or &ldquo;bottom-up&rdquo; where representatives are replaced by more Eurosceptic legislators.
+	</blockquote>
+	</p></p>
+	</div>
+	
+	<p><strong>Where eurosceptics diverge: Analyzing polarization in votes in the European Parliament</strong><br/>
 	with <em><a href="https://www.polsoz.fu-berlin.de/en/polwiss/forschung/international/europa/team/boerzel/index.html">Tanja B&ouml;rzel,</a></em>
 	<em><a href="https://www.fu-berlin.de/informationen-fuer/beschaeftigte/personalia/neuberufen/neuberufene-aktuell/hartlapp-zugehoer/index.html">Miriam Hartlapp-Zugeh&ouml;r,</a></em>
-	and <em><a href="https://www.polsoz.fu-berlin.de/en/polwiss/forschung/international/europa/team/alumni/Obholzer/index.html">Lukas Obholzer</a></em> 
+	and <em><a href="https://lukasobholzer.eu/">Lukas Obholzer</a></em> 
 	<button class="btn btn--inverse btn--small" onclick="showAbstract('AntiEU')">abstract</button>
 	<div id="AntiEU", style="display:none">
 	<p>
 	<blockquote style="text-align:justify">
-	Do Euroskeptics in the European Parliament participate in voting and are they more or less cohesive than their Europhile peers? Theories on rational voting, soicalization into international organizations and niche party behavior lead to different expectations of how Euroskeptics operate in the European Parliament. This article analzyes a quarter century of voting records (1994&ndash;2019) of all members of the European Parliament and systematically analzyes the behavior of Euroskeptics across policy areas and over time.  Results are pending &mdash; we are currently wrapping up the data collection.
+	This paper provides a comprehensive analysis of Eurosceptic contestation within the legislative arena of the European Parliament from 2009 to 2019. Under what conditions do Eurosceptics behave systematically differently from their &ldquo;Europhile&rdquo; peers, resulting in polarization along the integration dimension? We develop hypotheses on variation in polarization across policy areas, file characteristics, and legislator voting behavior. Drawing on roll-call votes in the EP, we map patterns of contestation &mdash; including polarization and Eurosceptic cohesion &mdash; across policy areas and test competing explanations of voting behavior. Our theory identifies broadly correctly where the Eurosceptic cleavage drives legislative behavior. We contribute to the growing literature on Eurosceptic behavior within legislative institutions by showing that Eurosceptics diverge from the Europhile plurality in particular when voting on constitutional policies, but much less when voting on policies with distributive consequences. Combining the sectoral insights with our additional results, a picture emerges of what explains polarization and, potentially, Eurosceptic cohesion.
+	</blockquote>
+	</p></p>
+	</div>
+	
+	<p><strong>Substantive representation of Euroscepticism: Contesting European integration within the European Parliament</strong><br/>
+	with <em><a href="https://lukasobholzer.eu/">Lukas Obholzer</a></em> 
+	<button class="btn btn--inverse btn--small" onclick="showAbstract('AntiEU2')">abstract</button>
+	<div id="AntiEU2", style="display:none">
+	<p>
+	<blockquote style="text-align:justify">
+	While some Eurosceptic members of the European Parliament (MEPs) engage constructively with legislative work, others opt for blanket opposition. This is reflective of distinct legislative roles of MEPs and results in differences in the representation of Eurosceptic voters. We ask whether and under what conditions Eurosceptics' behaviour within the European Parliament is shaped by the potential for public attention. Combining novel data on voting behaviour in committee-level as well as in plenary-level roll calls, we leverage the difference in public attention that the two arenas attract. Our analysis draws on variation in attendance and voting behaviour patterns across levels to test competing explanations of how and to what extent Eurosceptic legislators contest European integration when in the &ldquo;public eye&rdquo; in plenary as opposed to more secluded everyday work in committees. The findings demonstrate that MEPs are mindful of the distinct principals and audiences to whom they pander. The paper maps the behaviour and contributes to a growing literature on legislative behaviour of Eurosceptics.
 	</blockquote>
 	</p></p>
 	</div>
@@ -119,18 +141,6 @@ author_profile: true
 	Are the standing committees of the European Parliament representative of the chamber as a whole or are they ideologically biased and should, therefore, be expected to produce biased policy? Theories of legislative organization lead to competing expectations and the empirical literature has provided mixed evidence. This article re-evaluates the effects of ideology, expertise, and partisanship on legislative organization in the European Parliament's standing committees. The analysis employs a quarter century of voting records (roll-calls) from the European Parliament (1994&ndash;2019), matched with web-scraped information on each individual representative in that period. The findings lend support to the informational rationale: Expertise explains committee membership across every committee over the twenty-five year period whereas ideology and partisanship are unrelated to legislative organization in the European Parliament.
 	</blockquote>
 	</p></p>
-	</div>
-
-	<p><strong>Individuals, disaggregation of the state and negotiation tactics: Evidence from the European Union</strong><br/>
-	with <em><a href="http://www.lborolondon.ac.uk/about/staff/nicola-chelotti/">Nicola Chelotti</a></em>
-	<button class="btn btn--inverse btn--small" onclick="showAbstract('leadersEU')">abstract</button>
-	<div id="leadersEU", style="display:none">
-	<p>
-	<blockquote style="text-align:justify">
-	Why do states use certain negotiation tactics more than others? By arguing that the personal characteristics of individual negotiators help to explain political choices, this article contributes to the reinvigorated literature on individuals and International Relations. In particular, it takes issue with one of the most common challenges of this literature – how, given all the bureaucracies they are embedded in, individuals are able to shape political decisions. The article argues that one particular group of actors – diplomatic negotiators – have de facto acquired ultimate policy-making responsibilities, most prominently in the selection of tactics. The image of the negotiating state is thus re-conceptualized. Not only is the fiction of a hierarchical and vertically organized state rejected, evidence is presented of the opposite trend  – what might be called the ‘partial individualization’ of the state. Next, by testing four individual characteristics (experience, autonomy, social and epistemic motivations) against an original database of 138 questionnaires completed by national officials in EU foreign policy, the article shows that these characteristics matter in explaining variation in the use of tactics, although this does not apply to all the negotiating activities.   The article also reveals that the explanatory power of individual-level characteristics is limited under certain conditions.
-	</blockquote>
-	</p>
-	</p>
 	</div>
 
 	<p><strong>Estimates of public opinion on European Integration that are comparable across countries and over time</strong><br/>
