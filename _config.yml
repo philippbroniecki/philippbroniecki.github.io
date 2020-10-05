@@ -20,7 +20,7 @@ title                    : "Philipp Broniecki"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : "Philipp Broniecki"
-description              : "Welcome to my website! I am a Senior Research Officer at the ESRC Business and Local Governmnet Data Research Centre."
+description              : "Welcome to my website! I am a postdoctoral researcher in the Department of Political Sciene at University of Oslo."
 url                      : "https://philippbroniecki.github.io/"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : "philippbroniecki/philippbroniecki.github.io"
@@ -109,7 +109,7 @@ analytics:
 author:
   name             : "Philipp Christian Broniecki"
   avatar           : "/assets/images/Staff 2020-02-26 H&S 151.JPG"
-  bio              : "Senior Research Officer at the <a style='color: black;' style='text-decoration: underline;' href='http://www.blgdataresearch.org/'>ESRC Business and Local Government Data Research Centre</a>"
+  bio              : "Postdoctoral reseracher in the <a style='color: black;' style='text-decoration: underline;' href='https://www.sv.uio.no/isv/english/'>Department of Political Science</a> at University of Oslo"
   location         : #Essex \surl: "
   email            : #"philipp.broniecki@essex.ac.uk"
   links:
