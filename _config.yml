@@ -118,7 +118,7 @@ author:
       url: https://www.google.no/maps/place/Eilert+Sundts+hus,+Blokk+A/@59.9413684,10.7228715,17z/data=!3m1!4b1!4m5!3m4!1s0x46416de6cf21a27d:0xf17934de93697b79!8m2!3d59.9413657!4d10.7250602
     - label: "Email"
       icon: "fas fa-fw fa-envelope fa-lg"
-      url: mailto:philipp.broniecki@essex.ac.uk
+      url: mailto:p.c.broniecki@stv.uio.no
     - label: "Website"
       icon: "fas fa-fw fa-link fa-lg"
       # url: "https://your-website.com"
