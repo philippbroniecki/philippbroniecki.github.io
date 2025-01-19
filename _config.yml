@@ -124,7 +124,7 @@ author:
       # url: "https://your-website.com"
     - label: "Bluesky"
       icon: "/assets/images/bluesky.ico"
-      url: "@philippbroniecki.bsky.social"
+      url: "https://bsky.app/profile/philippbroniecki.bsky.social"
     - label: "Facebook"
       icon: "fab fa-fw fa-facebook-square"
       # url: "https://facebook.com/"
