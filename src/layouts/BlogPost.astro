@@ -1,0 +1,88 @@
+---
+import BaseLayout from './BaseLayout.astro';
+
+interface Props {
+  title: string;
+  description?: string;
+  pubDate: Date;
+  tags?: string[];
+}
+
+const { title, description, pubDate, tags = [] } = Astro.props;
+
+const formattedDate = pubDate.toLocaleDateString('en-GB', {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric',
+});
+---
+
+<BaseLayout title={`${title} – Philipp Broniecki`} description={description}>
+  <article class="blog-post">
+    <div class="post-hero">
+      <div class="container">
+        <a href="/blog/" class="back-link">&larr; Blog</a>
+        <h1>{title}</h1>
+        <div class="post-meta">
+          <time datetime={pubDate.toISOString()}>{formattedDate}</time>
+          {tags.length > 0 && (
+            <div class="post-tags">
+              {tags.map((tag) => <span class="tag">{tag}</span>)}
+            </div>
+          )}
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="prose post-content">
+        <slot />
+      </div>
+    </div>
+  </article>
+</BaseLayout>
+
+<style>
+  .post-hero {
+    background: var(--color-hero-bg);
+    color: var(--color-hero-text);
+    padding: var(--space-2xl) 0;
+  }
+
+  .back-link {
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+    display: inline-block;
+    margin-bottom: var(--space-lg);
+  }
+
+  .post-hero h1 {
+    color: var(--color-hero-text);
+    font-size: 1.75rem;
+    font-weight: 700;
+    max-width: var(--content-width);
+  }
+
+  .post-meta {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+    margin-top: var(--space-md);
+    flex-wrap: wrap;
+  }
+
+  time {
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+  }
+
+  .post-tags {
+    display: flex;
+    gap: var(--space-sm);
+    flex-wrap: wrap;
+  }
+
+  .post-content {
+    padding-top: var(--space-2xl);
+    padding-bottom: var(--space-2xl);
+  }
+</style>

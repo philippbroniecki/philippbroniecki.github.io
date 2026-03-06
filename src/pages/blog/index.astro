@@ -1,0 +1,133 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+
+const posts = (await getCollection('blog'))
+  .filter((p) => !p.data.draft)
+  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+---
+
+<BaseLayout title="Blog – Philipp Broniecki" description="Posts on data science, polling, methodology, and more.">
+  <div class="blog-hero">
+    <div class="container">
+      <h1>Blog</h1>
+      <p class="subtitle">Notes on data science, polling, and methodology</p>
+    </div>
+  </div>
+  <div class="container blog-list">
+    {posts.length === 0 && (
+      <p class="empty">No posts yet. Check back soon.</p>
+    )}
+    {posts.map((post) => {
+      const formattedDate = post.data.pubDate.toLocaleDateString('en-GB', {
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric',
+      });
+      return (
+        <a href={`/blog/${post.id}/`} class="post-card">
+          <div class="post-card-body">
+            <h2 class="post-card-title">{post.data.title}</h2>
+            <p class="post-card-desc">{post.data.description}</p>
+            <div class="post-card-footer">
+              <time datetime={post.data.pubDate.toISOString()}>{formattedDate}</time>
+              {post.data.tags.length > 0 && (
+                <div class="post-card-tags">
+                  {post.data.tags.map((t: string) => <span class="tag">{t}</span>)}
+                </div>
+              )}
+            </div>
+          </div>
+          <span class="post-card-arrow">&rarr;</span>
+        </a>
+      );
+    })}
+  </div>
+</BaseLayout>
+
+<style>
+  .blog-hero {
+    background: var(--color-hero-bg);
+    color: var(--color-hero-text);
+    padding: var(--space-2xl) 0;
+  }
+
+  .blog-hero h1 {
+    color: var(--color-hero-text);
+    font-size: 1.75rem;
+  }
+
+  .subtitle {
+    color: var(--color-text-muted);
+    margin-top: var(--space-sm);
+    font-size: 0.95rem;
+  }
+
+  .blog-list {
+    padding: var(--space-2xl) var(--space-xl);
+    max-width: var(--content-width);
+  }
+
+  .empty {
+    color: var(--color-text-muted);
+    font-style: italic;
+  }
+
+  .post-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-lg);
+    padding: var(--space-lg);
+    border: 1px solid var(--color-border-light);
+    border-radius: var(--radius-lg);
+    background: var(--color-surface);
+    margin-bottom: var(--space-md);
+    text-decoration: none;
+    color: inherit;
+    transition: box-shadow var(--transition-base), border-color var(--transition-base);
+  }
+
+  .post-card:hover {
+    border-color: var(--color-border);
+    box-shadow: 0 4px 16px var(--color-card-shadow-hover);
+    text-decoration: none;
+  }
+
+  .post-card-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: var(--space-xs);
+    color: var(--color-text);
+  }
+
+  .post-card-desc {
+    font-size: 0.875rem;
+    color: var(--color-text-secondary);
+    margin-bottom: var(--space-sm);
+    line-height: 1.5;
+  }
+
+  .post-card-footer {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+    flex-wrap: wrap;
+  }
+
+  time {
+    font-size: 0.8rem;
+    color: var(--color-text-muted);
+  }
+
+  .post-card-tags {
+    display: flex;
+    gap: var(--space-xs);
+  }
+
+  .post-card-arrow {
+    color: var(--color-text-muted);
+    font-size: 1.1rem;
+    flex-shrink: 0;
+  }
+</style>

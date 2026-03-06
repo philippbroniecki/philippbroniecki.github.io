@@ -1,0 +1,107 @@
+---
+interface Props {
+  title: string;
+  authors?: string;
+  year?: string;
+  venue?: string;
+  abstract?: string;
+  articleUrl?: string;
+  replicationUrl?: string;
+  packageUrl?: string;
+  packageLabel?: string;
+  id: string;
+}
+
+const {
+  title,
+  authors,
+  year,
+  venue,
+  abstract,
+  articleUrl,
+  replicationUrl,
+  packageUrl,
+  packageLabel,
+  id,
+} = Astro.props;
+---
+
+<div class="pub">
+  <p class="pub-title">{title}</p>
+  {authors && <p class="pub-authors">{authors}</p>}
+  {(year || venue) && (
+    <p class="pub-venue">
+      {year}{year && venue ? ' in ' : ''}<em>{venue}</em>
+    </p>
+  )}
+  <div class="pub-actions">
+    {abstract && (
+      <button class="btn toggle-abstract" data-target={id}>abstract</button>
+    )}
+    {articleUrl && <a href={articleUrl} class="btn" target="_blank" rel="noopener noreferrer">article</a>}
+    {replicationUrl && <a href={replicationUrl} class="btn" target="_blank" rel="noopener noreferrer">replication</a>}
+    {packageUrl && <a href={packageUrl} class="btn" target="_blank" rel="noopener noreferrer">{packageLabel || 'package'}</a>}
+  </div>
+  {abstract && (
+    <div class="pub-abstract" id={id}>
+      <blockquote set:html={abstract} />
+    </div>
+  )}
+</div>
+
+<style>
+  .pub {
+    margin-bottom: var(--space-xl);
+  }
+
+  .pub-title {
+    font-weight: 600;
+    font-size: 0.95rem;
+    margin-bottom: 0.2rem;
+    color: var(--color-text);
+  }
+
+  .pub-authors {
+    font-size: 0.85rem;
+    color: var(--color-text-secondary);
+    margin-bottom: 0.15rem;
+  }
+
+  .pub-venue {
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+    margin-bottom: var(--space-sm);
+  }
+
+  .pub-actions {
+    display: flex;
+    gap: var(--space-sm);
+    flex-wrap: wrap;
+    margin-bottom: var(--space-sm);
+  }
+
+  .pub-abstract {
+    display: none;
+    margin-top: var(--space-sm);
+  }
+
+  .pub-abstract.open {
+    display: block;
+  }
+
+  .pub-abstract blockquote {
+    font-size: 0.85rem;
+    text-align: justify;
+  }
+</style>
+
+<script>
+  document.querySelectorAll('.toggle-abstract').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const target = (btn as HTMLElement).dataset.target;
+      if (!target) return;
+      const el = document.getElementById(target);
+      el?.classList.toggle('open');
+    });
+  });
+</script>

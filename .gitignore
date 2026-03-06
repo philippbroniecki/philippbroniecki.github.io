@@ -1,14 +1,25 @@
-*.gem
-*.sublime-project
-*.sublime-workspace
-.bundle
+# Astro build output
+dist/
+.astro/
+
+# Dependencies
+node_modules/
+
+# Environment
+.env
+.env.*
+
+# OS
 .DS_Store
-.jekyll-metadata
-.sass-cache
-_asset_bundler_cache
-_site
-codekit-config.json
-example/_site
-Gemfile.lock
-node_modules
+Thumbs.db
+
+# Editor
+*.swp
+*.swo
+*~
+
+# Claude Code local settings
+.claude/
+
+# Logs
 npm-debug.log*
