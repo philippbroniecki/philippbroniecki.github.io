@@ -1,0 +1,336 @@
+---
+const prompt = 'Thinking about the current situation with Iran, which comes closest to your view on U.S. policy?';
+
+const modes = [
+  { id: 'all_americans', label: 'What all Americans said' },
+  { id: 'with_view', label: 'What Americans with a view said' },
+];
+
+const options = [
+  {
+    label: 'The U.S. should have used military force',
+    color: '#c46525',
+    all: { current: 32.9, prior: 25.8 },
+    withView: { current: 36.8, prior: 30.5 },
+  },
+  {
+    label: 'The U.S. should have used diplomacy and sanctions',
+    color: '#1a6b73',
+    all: { current: 26.4, prior: 31.7 },
+    withView: { current: 29.5, prior: 37.5 },
+  },
+  {
+    label: 'The U.S. should have taken a less involved role in the situation with Iran',
+    color: '#5a7d9a',
+    all: { current: 30.3, prior: 27.1 },
+    withView: { current: 33.8, prior: 32.1 },
+  },
+  {
+    label: 'Unsure',
+    color: '#a8b5c4',
+    all: { current: 10.4, prior: 15.3 },
+    withView: { current: null, prior: null },
+  },
+];
+---
+
+<section class="survey-card" data-survey-card>
+  <div class="survey-card-header">
+    <p class="survey-card-label">Survey Question</p>
+    <div class="survey-card-modes" role="tablist" aria-label="Response universe">
+      {modes.map((mode, idx) => (
+        <button
+          type="button"
+          class:list={['mode-btn', idx === 0 && 'is-active']}
+          data-mode-btn
+          data-mode={mode.id}
+          aria-pressed={idx === 0 ? 'true' : 'false'}
+        >
+          {mode.label}
+        </button>
+      ))}
+    </div>
+  </div>
+
+  <blockquote class="survey-card-prompt">{prompt}</blockquote>
+
+  <ul class="survey-card-options" aria-label="Response options with estimates">
+    {options.map((option) => (
+      <li
+        class="survey-option"
+        data-option
+        data-all-current={option.all.current}
+        data-all-prior={option.all.prior}
+        data-with-view-current={option.withView.current ?? ''}
+        data-with-view-prior={option.withView.prior ?? ''}
+        style={`--option-color: ${option.color};`}
+      >
+        <div class="survey-option-left">
+          <span class="survey-option-label">{option.label}</span>
+          <span class="survey-option-track">
+            <span class="survey-option-fill survey-option-fill-prior" data-prior></span>
+            <span class="survey-option-fill survey-option-fill-current" data-current></span>
+          </span>
+        </div>
+        <span class="survey-option-values">
+          <span class="survey-option-main" data-main></span>
+          <span class="survey-option-delta" data-delta></span>
+        </span>
+      </li>
+    ))}
+  </ul>
+</section>
+
+<script>
+  const toNum = (value) => {
+    if (value === null || value === undefined || value === '') return null;
+    const n = Number(value);
+    return Number.isFinite(n) ? n : null;
+  };
+
+  const fmtPct = (value) => `${value.toFixed(1)}%`;
+  const fmtDelta = (value) => `${value > 0 ? '+' : ''}${value.toFixed(1)}pp`;
+
+  document.querySelectorAll('[data-survey-card]').forEach((card) => {
+    const buttons = Array.from(card.querySelectorAll('[data-mode-btn]'));
+    const rows = Array.from(card.querySelectorAll('[data-option]'));
+
+    const update = (mode) => {
+      const currentKey = mode === 'with_view' ? 'withViewCurrent' : 'allCurrent';
+      const priorKey = mode === 'with_view' ? 'withViewPrior' : 'allPrior';
+
+      const models = rows
+        .map((row) => ({
+          row,
+          current: toNum(row.dataset[currentKey]),
+          prior: toNum(row.dataset[priorKey]),
+        }))
+        .filter((entry) => entry.current !== null);
+
+      const maxVal = Math.max(
+        1,
+        ...models.flatMap((entry) => [entry.current, entry.prior].filter((v) => v !== null))
+      );
+
+      rows.forEach((row) => {
+        row.hidden = true;
+      });
+
+      models.forEach(({ row, current, prior }) => {
+        const currentPct = (current / maxVal) * 100;
+        const priorPct = prior === null ? 0 : (prior / maxVal) * 100;
+        const delta = prior === null ? null : current - prior;
+
+        const currentEl = row.querySelector('[data-current]');
+        const priorEl = row.querySelector('[data-prior]');
+        const mainEl = row.querySelector('[data-main]');
+        const deltaEl = row.querySelector('[data-delta]');
+
+        if (currentEl) currentEl.style.width = `${currentPct.toFixed(2)}%`;
+        if (priorEl) priorEl.style.width = `${priorPct.toFixed(2)}%`;
+        if (mainEl) mainEl.textContent = fmtPct(current);
+
+        if (deltaEl) {
+          if (delta === null) {
+            deltaEl.textContent = '';
+            deltaEl.className = 'survey-option-delta';
+          } else {
+            const directionClass = delta > 0 ? 'is-up' : delta < 0 ? 'is-down' : 'is-flat';
+            deltaEl.textContent = fmtDelta(delta);
+            deltaEl.className = `survey-option-delta ${directionClass}`;
+          }
+        }
+
+        row.hidden = false;
+      });
+
+      buttons.forEach((btn) => {
+        const active = btn.dataset.mode === mode;
+        btn.classList.toggle('is-active', active);
+        btn.setAttribute('aria-pressed', active ? 'true' : 'false');
+      });
+    };
+
+    buttons.forEach((btn) => {
+      btn.addEventListener('click', () => {
+        update(btn.dataset.mode || 'all_americans');
+      });
+    });
+
+    update('all_americans');
+  });
+</script>
+
+<style>
+  .survey-card {
+    border: 1px solid var(--color-border-light);
+    border-radius: var(--radius-lg);
+    background: var(--color-surface);
+    padding: var(--space-lg);
+    margin: var(--space-xl) 0;
+    box-shadow: 0 6px 20px var(--color-card-shadow);
+  }
+
+  .survey-card-header {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-md);
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: var(--space-md);
+  }
+
+  .survey-card-label {
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--color-text-muted);
+    margin: 0;
+  }
+
+  .survey-card-modes {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-xs);
+    border: 1px solid var(--color-border);
+    border-radius: 9999px;
+    padding: 0.2rem;
+    background: var(--color-surface-hover);
+  }
+
+  .mode-btn {
+    border: 0;
+    border-radius: 9999px;
+    background: transparent;
+    color: var(--color-text-secondary);
+    font-size: 0.72rem;
+    line-height: 1;
+    font-weight: 600;
+    padding: 0.45rem 0.65rem;
+    cursor: pointer;
+    transition: background var(--transition-fast), color var(--transition-fast);
+  }
+
+  .mode-btn.is-active {
+    background: var(--color-surface);
+    color: var(--color-text);
+  }
+
+  .survey-card-prompt {
+    margin: 0 0 var(--space-md);
+    border-left: 3px solid var(--color-accent);
+    padding-left: var(--space-md);
+    color: var(--color-text-secondary);
+    font-size: 0.98rem;
+    font-style: italic;
+  }
+
+  .survey-card-options {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: var(--space-sm);
+  }
+
+  .survey-option {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-md);
+  }
+
+  .survey-option-left {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .survey-option-label {
+    display: block;
+    font-size: 0.85rem;
+    color: var(--color-text-secondary);
+    margin-bottom: 0.35rem;
+  }
+
+  .survey-option-track {
+    position: relative;
+    display: block;
+    height: 0.65rem;
+    border-radius: 9999px;
+    overflow: hidden;
+    background: var(--color-border-light);
+  }
+
+  .survey-option-fill {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    border-radius: 9999px;
+  }
+
+  .survey-option-fill-prior {
+    opacity: 0.4;
+    background: var(--option-color);
+  }
+
+  .survey-option-fill-current {
+    opacity: 0.95;
+    background: var(--option-color);
+  }
+
+  .survey-option-values {
+    width: 5.2rem;
+    text-align: right;
+    flex-shrink: 0;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .survey-option-main {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--color-text);
+    line-height: 1.1;
+  }
+
+  .survey-option-delta {
+    display: block;
+    margin-top: 0.1rem;
+    font-size: 0.75rem;
+    color: var(--color-text-muted);
+    line-height: 1.1;
+  }
+
+  .survey-option-delta.is-up {
+    color: #a24f1e;
+  }
+
+  .survey-option-delta.is-down {
+    color: #2a6b77;
+  }
+
+  .survey-option-delta.is-flat {
+    color: var(--color-text-muted);
+  }
+
+  @media (max-width: 640px) {
+    .survey-card {
+      padding: var(--space-md);
+    }
+
+    .survey-option {
+      gap: var(--space-sm);
+      align-items: flex-start;
+    }
+
+    .survey-option-values {
+      width: 4.5rem;
+    }
+
+    .survey-option-main {
+      font-size: 0.8rem;
+    }
+  }
+</style>

@@ -1,0 +1,140 @@
+---
+interface Props {
+  card: 'survey_question' | 'demographics' | 'archetypes' | 'topline_questions' | 'demographic_breakdown' | 'archetype_breakdown';
+  includeToggle?: boolean;
+  title?: string;
+}
+
+const { card, includeToggle = false, title } = Astro.props;
+
+const cardMap: Record<string, string> = {
+  survey_question: 'topline_questions',
+  demographics: 'demographic_breakdown',
+  archetypes: 'archetype_breakdown',
+  topline_questions: 'topline_questions',
+  demographic_breakdown: 'demographic_breakdown',
+  archetype_breakdown: 'archetype_breakdown',
+};
+
+const resolvedCard = cardMap[card] || 'topline_questions';
+
+const defaultTitleMap: Record<string, string> = {
+  topline_questions: 'Survey Question',
+  demographic_breakdown: 'Demographic Breakdown',
+  archetype_breakdown: 'Archetypes',
+};
+
+const frameTitle = title || `Iran Policy — ${defaultTitleMap[resolvedCard] || 'Card'}`;
+
+const params = new URLSearchParams({ embed_component: resolvedCard });
+if (includeToggle) params.set('embed_include_toggle', '1');
+
+const src = `/iran_policy/standalone_website/index.html?${params.toString()}`;
+
+const minHeights: Record<string, number> = {
+  topline_questions: 360,
+  demographic_breakdown: 620,
+  archetype_breakdown: 920,
+};
+const minHeight = minHeights[resolvedCard] || 480;
+---
+
+<div class="iran-card-embed" data-iran-card-embed>
+  <iframe
+    data-iran-card-embed-frame
+    src={src}
+    title={frameTitle}
+    loading="lazy"
+    style={`min-height:${minHeight}px;`}
+  ></iframe>
+</div>
+
+<script>
+  const EMBED_SELECTOR = '[data-iran-card-embed]';
+
+  // Read the body's natural content height from inside the iframe.
+  // We use body-only measurements because document.documentElement.scrollHeight
+  // returns max(content, viewport) and can never shrink below the iframe's own height.
+  // body.scrollHeight is unaffected by the iframe element's rendered size once
+  // the standalone site sets body { height: auto; min-height: auto } in embed mode.
+  const readBodyHeight = (doc) => {
+    const body = doc?.body;
+    return Math.max(body?.scrollHeight || 0, body?.offsetHeight || 0);
+  };
+
+  const resizeFrame = (frame) => {
+    try {
+      const doc = frame.contentDocument;
+      if (!doc) return;
+      const h = readBodyHeight(doc);
+      if (h > 0) {
+        frame.style.height = `${h + 6}px`;
+        // Clear the initial min-height placeholder so the iframe can shrink to content.
+        frame.style.minHeight = '0';
+      }
+    } catch (_) {}
+  };
+
+  // Send the current blog theme into a single iran card iframe.
+  const sendThemeToFrame = (frame) => {
+    try {
+      const theme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'light';
+      frame.contentWindow?.postMessage({ type: 'vdh_theme', theme }, '*');
+    } catch (_) {}
+  };
+
+  const wire = (root) => {
+    if (root.dataset.embedReady === '1') return;
+    root.dataset.embedReady = '1';
+
+    const frame = root.querySelector('[data-iran-card-embed-frame]');
+    if (!frame) return;
+
+    const onLoad = () => {
+      // Measure immediately and at staggered intervals to catch async data renders.
+      resizeFrame(frame);
+      setTimeout(() => resizeFrame(frame), 150);
+      setTimeout(() => resizeFrame(frame), 600);
+      setTimeout(() => resizeFrame(frame), 1500);
+
+      sendThemeToFrame(frame);
+
+      // ResizeObserver on the inner body catches any subsequent height changes
+      // (data loads, interactions, theme switches).
+      try {
+        const doc = frame.contentDocument;
+        if (!doc || frame.dataset.roAttached === '1') return;
+        new ResizeObserver(() => resizeFrame(frame)).observe(doc.body);
+        frame.dataset.roAttached = '1';
+      } catch (_) {}
+    };
+
+    frame.addEventListener('load', onLoad);
+  };
+
+  document.querySelectorAll(EMBED_SELECTOR).forEach(wire);
+
+  // Keep all iran card iframes in sync whenever the blog theme changes.
+  if (!window.__vdhThemeObserverSet) {
+    window.__vdhThemeObserverSet = true;
+    new MutationObserver(() => {
+      document.querySelectorAll('[data-iran-card-embed-frame]').forEach(sendThemeToFrame);
+    }).observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
+  }
+</script>
+
+<style>
+  .iran-card-embed {
+    margin: 1.5rem 0;
+    width: 100%;
+    background: var(--color-bg);
+  }
+
+  .iran-card-embed iframe {
+    width: 100%;
+    border: 0;
+    display: block;
+    background: transparent;
+    overflow: hidden;
+  }
+</style>

@@ -1,0 +1,424 @@
+---
+import archetypesData from '../data/iran-policy-archetypes.json';
+
+const defaultMode = archetypesData.modes?.[0]?.id || 'all_americans';
+const defaultMetric = archetypesData.defaultMetric || archetypesData.metrics?.[0]?.id || '';
+---
+
+<section class="archetypes-card" data-archetypes-card>
+  <div class="card-head">
+    <p class="card-label">Archetypes</p>
+    <div class="mode-switch" role="tablist" aria-label="Response universe">
+      {archetypesData.modes.map((mode, idx) => (
+        <button
+          type="button"
+          class:list={['mode-btn', idx === 0 && 'is-active']}
+          data-mode-btn
+          data-mode={mode.id}
+          aria-pressed={idx === 0 ? 'true' : 'false'}
+        >
+          {mode.label}
+        </button>
+      ))}
+    </div>
+  </div>
+
+  <label class="control-item">
+    <span>Response category</span>
+    <select data-metric-select>
+      {archetypesData.metrics.map((metric) => (
+        <option value={metric.id} selected={metric.id === defaultMetric}>
+          {metric.label}
+        </option>
+      ))}
+    </select>
+  </label>
+
+  <div class="rows" data-rows></div>
+  <p class="footnote">Values are weighted poststratified estimates (percent).</p>
+</section>
+
+<script define:vars={{ archetypesData, defaultMode, defaultMetric }}>
+  const toNum = (value) => {
+    if (value === null || value === undefined || value === '') return null;
+    const n = Number(value);
+    return Number.isFinite(n) ? n : null;
+  };
+
+  const fmtPct = (value) => `${value.toFixed(1)}%`;
+  const fmtDelta = (value) => `${value > 0 ? '+' : ''}${value.toFixed(1)}pp`;
+
+  document.querySelectorAll('[data-archetypes-card]').forEach((card) => {
+    const metricSelect = card.querySelector('[data-metric-select]');
+    const rowsRoot = card.querySelector('[data-rows]');
+    const modeButtons = Array.from(card.querySelectorAll('[data-mode-btn]'));
+
+    if (!metricSelect || !rowsRoot) {
+      return;
+    }
+
+    const metrics = Array.isArray(archetypesData.metrics) ? archetypesData.metrics : [];
+    const entriesByMetric = archetypesData.entriesByMetric || {};
+
+    if (metrics.length === 0) {
+      rowsRoot.innerHTML = '<p class="empty">No archetype metrics available.</p>';
+      return;
+    }
+
+    let activeMode = defaultMode;
+    let activeMetricId = defaultMetric;
+
+    const syncMetricValue = () => {
+      const hasMetric = metrics.some((metric) => metric.id === activeMetricId);
+      activeMetricId = hasMetric ? activeMetricId : metrics[0].id;
+      metricSelect.value = activeMetricId;
+    };
+
+    const renderRows = () => {
+      const metric = metrics.find((item) => item.id === activeMetricId) || metrics[0];
+      if (!metric) {
+        rowsRoot.innerHTML = '<p class="empty">No archetype metrics available.</p>';
+        return;
+      }
+
+      const rows = Array.isArray(entriesByMetric[metric.id]) ? entriesByMetric[metric.id] : [];
+      const models = rows
+        .map((entry) => {
+          const bucket = entry?.[activeMode] || {};
+          return {
+            label: entry?.label || entry?.key || 'Unknown',
+            subtitle: entry?.subtitle || '',
+            rationale: entry?.rationale || '',
+            current: toNum(bucket.current),
+            prior: toNum(bucket.prior),
+          };
+        })
+        .filter((entry) => entry.current !== null)
+        .sort((a, b) => b.current - a.current);
+
+      rowsRoot.innerHTML = '';
+
+      if (models.length === 0) {
+        rowsRoot.innerHTML = '<p class="empty">No data available for this selection.</p>';
+        return;
+      }
+
+      const maxVal = Math.max(
+        1,
+        ...models.flatMap((entry) => [entry.current, entry.prior].filter((value) => value !== null))
+      );
+
+      models.forEach((entry) => {
+        const currentPct = (entry.current / maxVal) * 100;
+        const priorPct = entry.prior === null ? 0 : (entry.prior / maxVal) * 100;
+        const delta = entry.prior === null ? null : entry.current - entry.prior;
+
+        const row = document.createElement('div');
+        row.className = 'arch-row';
+
+        const left = document.createElement('div');
+        left.className = 'arch-left';
+
+        const top = document.createElement('div');
+        top.className = 'arch-topline';
+
+        const label = document.createElement('span');
+        label.className = 'arch-label';
+        label.textContent = entry.label;
+        top.appendChild(label);
+
+        if (entry.rationale) {
+          const info = document.createElement('span');
+          info.className = 'arch-info';
+          info.textContent = 'i';
+          info.title = entry.rationale;
+          info.setAttribute('aria-label', `Archetype details: ${entry.label}`);
+          top.appendChild(info);
+        }
+
+        left.appendChild(top);
+
+        if (entry.subtitle) {
+          const subtitle = document.createElement('span');
+          subtitle.className = 'arch-subtitle';
+          subtitle.textContent = entry.subtitle;
+          left.appendChild(subtitle);
+        }
+
+        const track = document.createElement('span');
+        track.className = 'arch-track';
+
+        const priorFill = document.createElement('span');
+        priorFill.className = 'arch-fill arch-fill-prior';
+        priorFill.style.width = `${priorPct.toFixed(2)}%`;
+        priorFill.style.background = metric.color;
+
+        const currentFill = document.createElement('span');
+        currentFill.className = 'arch-fill arch-fill-current';
+        currentFill.style.width = `${currentPct.toFixed(2)}%`;
+        currentFill.style.background = metric.color;
+
+        track.appendChild(priorFill);
+        track.appendChild(currentFill);
+        left.appendChild(track);
+
+        const values = document.createElement('span');
+        values.className = 'arch-values';
+
+        const main = document.createElement('span');
+        main.className = 'arch-main';
+        main.textContent = fmtPct(entry.current);
+        values.appendChild(main);
+
+        if (delta !== null) {
+          const deltaEl = document.createElement('span');
+          deltaEl.className = 'arch-delta';
+          if (delta > 0) deltaEl.classList.add('is-up');
+          if (delta < 0) deltaEl.classList.add('is-down');
+          if (delta === 0) deltaEl.classList.add('is-flat');
+          deltaEl.textContent = fmtDelta(delta);
+          values.appendChild(deltaEl);
+        }
+
+        row.appendChild(left);
+        row.appendChild(values);
+        rowsRoot.appendChild(row);
+      });
+    };
+
+    const render = () => {
+      modeButtons.forEach((btn) => {
+        const active = btn.dataset.mode === activeMode;
+        btn.classList.toggle('is-active', active);
+        btn.setAttribute('aria-pressed', active ? 'true' : 'false');
+      });
+      renderRows();
+    };
+
+    metricSelect.addEventListener('change', () => {
+      activeMetricId = metricSelect.value;
+      render();
+    });
+
+    modeButtons.forEach((btn) => {
+      btn.addEventListener('click', () => {
+        activeMode = btn.dataset.mode || 'all_americans';
+        render();
+      });
+    });
+
+    syncMetricValue();
+    render();
+  });
+</script>
+
+<style>
+  .archetypes-card {
+    border: 1px solid var(--color-border-light);
+    border-radius: var(--radius-lg);
+    background: var(--color-surface);
+    padding: var(--space-lg);
+    margin: var(--space-xl) 0;
+    box-shadow: 0 6px 20px var(--color-card-shadow);
+  }
+
+  .card-head {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--space-md);
+    margin-bottom: var(--space-md);
+  }
+
+  .card-label {
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--color-text-muted);
+    margin: 0;
+  }
+
+  .mode-switch {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-xs);
+    border: 1px solid var(--color-border);
+    border-radius: 9999px;
+    padding: 0.2rem;
+    background: var(--color-surface-hover);
+  }
+
+  .mode-btn {
+    border: 0;
+    border-radius: 9999px;
+    background: transparent;
+    color: var(--color-text-secondary);
+    font-size: 0.72rem;
+    line-height: 1;
+    font-weight: 600;
+    padding: 0.45rem 0.65rem;
+    cursor: pointer;
+    transition: background var(--transition-fast), color var(--transition-fast);
+  }
+
+  .mode-btn.is-active {
+    background: var(--color-surface);
+    color: var(--color-text);
+  }
+
+  .control-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+    margin-bottom: var(--space-md);
+  }
+
+  .control-item span {
+    font-size: 0.75rem;
+    color: var(--color-text-muted);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+
+  .control-item select {
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    background: var(--color-surface);
+    color: var(--color-text);
+    font-size: 0.8rem;
+    padding: 0.45rem 0.55rem;
+  }
+
+  .rows {
+    display: grid;
+    gap: var(--space-sm);
+  }
+
+  .arch-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-md);
+  }
+
+  .arch-left {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .arch-topline {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    margin-bottom: 0.2rem;
+  }
+
+  .arch-label {
+    font-size: 0.84rem;
+    font-weight: 600;
+    color: var(--color-text);
+  }
+
+  .arch-info {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 9999px;
+    border: 1px solid var(--color-border);
+    color: var(--color-text-muted);
+    font-size: 0.7rem;
+    line-height: 1;
+    cursor: help;
+  }
+
+  .arch-subtitle {
+    display: block;
+    font-size: 0.74rem;
+    color: var(--color-text-muted);
+    margin-bottom: 0.33rem;
+  }
+
+  .arch-track {
+    position: relative;
+    display: block;
+    height: 0.62rem;
+    border-radius: 9999px;
+    overflow: hidden;
+    background: var(--color-border-light);
+  }
+
+  .arch-fill {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    border-radius: 9999px;
+  }
+
+  .arch-fill-prior {
+    opacity: 0.4;
+  }
+
+  .arch-fill-current {
+    opacity: 0.95;
+  }
+
+  .arch-values {
+    width: 5.2rem;
+    text-align: right;
+    flex-shrink: 0;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .arch-main {
+    display: block;
+    font-size: 0.84rem;
+    font-weight: 700;
+    line-height: 1.1;
+    color: var(--color-text);
+  }
+
+  .arch-delta {
+    display: block;
+    margin-top: 0.1rem;
+    font-size: 0.74rem;
+    line-height: 1.1;
+    color: var(--color-text-muted);
+  }
+
+  .arch-delta.is-up {
+    color: #a24f1e;
+  }
+
+  .arch-delta.is-down {
+    color: #2a6b77;
+  }
+
+  .footnote {
+    margin: var(--space-md) 0 0;
+    font-size: 0.74rem;
+    color: var(--color-text-muted);
+  }
+
+  .empty {
+    color: var(--color-text-muted);
+    font-size: 0.84rem;
+    font-style: italic;
+    margin: 0;
+  }
+
+  @media (max-width: 720px) {
+    .archetypes-card {
+      padding: var(--space-md);
+    }
+
+    .arch-values {
+      width: 4.6rem;
+    }
+  }
+</style>

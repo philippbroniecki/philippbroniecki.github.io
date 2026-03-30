@@ -1,0 +1,1792 @@
+{
+  "defaultDemographic": "party",
+  "defaultMetric": "military_force",
+  "modes": [
+    {
+      "id": "all_americans",
+      "label": "What all Americans said"
+    },
+    {
+      "id": "with_view",
+      "label": "What Americans with a view said"
+    }
+  ],
+  "dimensions": [
+    {
+      "id": "party",
+      "label": "Party",
+      "metrics": [
+        {
+          "id": "military_force",
+          "label": "The U.S. should have used military force",
+          "color": "#c46525"
+        },
+        {
+          "id": "diplomacy",
+          "label": "The U.S. should have used diplomacy and sanctions",
+          "color": "#1a6b73"
+        },
+        {
+          "id": "less_involved",
+          "label": "The U.S. should have taken a less involved role in the situation with Iran",
+          "color": "#5a7d9a"
+        },
+        {
+          "id": "diplomacy_plus_less_involved_norm",
+          "label": "The U.S. should have used diplomacy and sanctions + The U.S. should have taken a less involved role in the situation with Iran",
+          "color": "#1a6b73"
+        },
+        {
+          "id": "unsure",
+          "label": "Unsure",
+          "color": "#a8b5c4"
+        }
+      ],
+      "rows": [
+        {
+          "id": "R",
+          "label": "Republicans",
+          "values": {
+            "military_force": {
+              "all_americans": {
+                "current": 51.2,
+                "prior": 37.1
+              },
+              "with_view": {
+                "current": 56.2,
+                "prior": 42.6
+              }
+            },
+            "diplomacy": {
+              "all_americans": {
+                "current": 19.8,
+                "prior": 27.9
+              },
+              "with_view": {
+                "current": 21.8,
+                "prior": 32.1
+              }
+            },
+            "less_involved": {
+              "all_americans": {
+                "current": 20,
+                "prior": 22
+              },
+              "with_view": {
+                "current": 22,
+                "prior": 25.3
+              }
+            },
+            "diplomacy_plus_less_involved_norm": {
+              "all_americans": {
+                "current": 39.8,
+                "prior": 50
+              },
+              "with_view": {
+                "current": 43.8,
+                "prior": 57.4
+              }
+            },
+            "unsure": {
+              "all_americans": {
+                "current": 9.1,
+                "prior": 12.9
+              },
+              "with_view": {
+                "current": null,
+                "prior": null
+              }
+            }
+          }
+        },
+        {
+          "id": "O",
+          "label": "Independents / Other",
+          "values": {
+            "military_force": {
+              "all_americans": {
+                "current": 30.9,
+                "prior": 23.7
+              },
+              "with_view": {
+                "current": 36.1,
+                "prior": 28.6
+              }
+            },
+            "diplomacy": {
+              "all_americans": {
+                "current": 24.5,
+                "prior": 28.5
+              },
+              "with_view": {
+                "current": 28.6,
+                "prior": 34.4
+              }
+            },
+            "less_involved": {
+              "all_americans": {
+                "current": 30.2,
+                "prior": 30.6
+              },
+              "with_view": {
+                "current": 35.3,
+                "prior": 37
+              }
+            },
+            "diplomacy_plus_less_involved_norm": {
+              "all_americans": {
+                "current": 54.7,
+                "prior": 59.2
+              },
+              "with_view": {
+                "current": 63.9,
+                "prior": 71.4
+              }
+            },
+            "unsure": {
+              "all_americans": {
+                "current": 14.4,
+                "prior": 17.1
+              },
+              "with_view": {
+                "current": null,
+                "prior": null
+              }
+            }
+          }
+        },
+        {
+          "id": "D",
+          "label": "Democrats",
+          "values": {
+            "military_force": {
+              "all_americans": {
+                "current": 15.9,
+                "prior": 15.7
+              },
+              "with_view": {
+                "current": 17.5,
+                "prior": 18.9
+              }
+            },
+            "diplomacy": {
+              "all_americans": {
+                "current": 34.3,
+                "prior": 37.6
+              },
+              "with_view": {
+                "current": 37.7,
+                "prior": 45.1
+              }
+            },
+            "less_involved": {
+              "all_americans": {
+                "current": 40.7,
+                "prior": 30
+              },
+              "with_view": {
+                "current": 44.8,
+                "prior": 36
+              }
+            },
+            "diplomacy_plus_less_involved_norm": {
+              "all_americans": {
+                "current": 75,
+                "prior": 67.7
+              },
+              "with_view": {
+                "current": 82.5,
+                "prior": 81.1
+              }
+            },
+            "unsure": {
+              "all_americans": {
+                "current": 9,
+                "prior": 16.6
+              },
+              "with_view": {
+                "current": null,
+                "prior": null
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "gender",
+      "label": "Gender",
+      "metrics": [
+        {
+          "id": "military_force",
+          "label": "The U.S. should have used military force",
+          "color": "#c46525"
+        },
+        {
+          "id": "diplomacy",
+          "label": "The U.S. should have used diplomacy and sanctions",
+          "color": "#1a6b73"
+        },
+        {
+          "id": "less_involved",
+          "label": "The U.S. should have taken a less involved role in the situation with Iran",
+          "color": "#5a7d9a"
+        },
+        {
+          "id": "diplomacy_plus_less_involved_norm",
+          "label": "The U.S. should have used diplomacy and sanctions + The U.S. should have taken a less involved role in the situation with Iran",
+          "color": "#1a6b73"
+        },
+        {
+          "id": "unsure",
+          "label": "Unsure",
+          "color": "#a8b5c4"
+        }
+      ],
+      "rows": [
+        {
+          "id": "Male",
+          "label": "Male",
+          "values": {
+            "military_force": {
+              "all_americans": {
+                "current": 36.2,
+                "prior": 30.2
+              },
+              "with_view": {
+                "current": 39.4,
+                "prior": 33.9
+              }
+            },
+            "diplomacy": {
+              "all_americans": {
+                "current": 30.1,
+                "prior": 33.1
+              },
+              "with_view": {
+                "current": 32.8,
+                "prior": 37.2
+              }
+            },
+            "less_involved": {
+              "all_americans": {
+                "current": 25.6,
+                "prior": 25.7
+              },
+              "with_view": {
+                "current": 27.9,
+                "prior": 28.9
+              }
+            },
+            "diplomacy_plus_less_involved_norm": {
+              "all_americans": {
+                "current": 55.7,
+                "prior": 58.9
+              },
+              "with_view": {
+                "current": 60.6,
+                "prior": 66.1
+              }
+            },
+            "unsure": {
+              "all_americans": {
+                "current": 8.1,
+                "prior": 10.9
+              },
+              "with_view": {
+                "current": null,
+                "prior": null
+              }
+            }
+          }
+        },
+        {
+          "id": "Female",
+          "label": "Female",
+          "values": {
+            "military_force": {
+              "all_americans": {
+                "current": 30.1,
+                "prior": 21.9
+              },
+              "with_view": {
+                "current": 34.4,
+                "prior": 27.1
+              }
+            },
+            "diplomacy": {
+              "all_americans": {
+                "current": 23.2,
+                "prior": 30.5
+              },
+              "with_view": {
+                "current": 26.4,
+                "prior": 37.8
+              }
+            },
+            "less_involved": {
+              "all_americans": {
+                "current": 34.4,
+                "prior": 28.4
+              },
+              "with_view": {
+                "current": 39.2,
+                "prior": 35.1
+              }
+            },
+            "diplomacy_plus_less_involved_norm": {
+              "all_americans": {
+                "current": 57.5,
+                "prior": 58.9
+              },
+              "with_view": {
+                "current": 65.6,
+                "prior": 72.9
+              }
+            },
+            "unsure": {
+              "all_americans": {
+                "current": 12.3,
+                "prior": 19.2
+              },
+              "with_view": {
+                "current": null,
+                "prior": null
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "age",
+      "label": "Age",
+      "metrics": [
+        {
+          "id": "military_force",
+          "label": "The U.S. should have used military force",
+          "color": "#c46525"
+        },
+        {
+          "id": "diplomacy",
+          "label": "The U.S. should have used diplomacy and sanctions",
+          "color": "#1a6b73"
+        },
+        {
+          "id": "less_involved",
+          "label": "The U.S. should have taken a less involved role in the situation with Iran",
+          "color": "#5a7d9a"
+        },
+        {
+          "id": "diplomacy_plus_less_involved_norm",
+          "label": "The U.S. should have used diplomacy and sanctions + The U.S. should have taken a less involved role in the situation with Iran",
+          "color": "#1a6b73"
+        },
+        {
+          "id": "unsure",
+          "label": "Unsure",
+          "color": "#a8b5c4"
+        }
+      ],
+      "rows": [
+        {
+          "id": "Gen Z",
+          "label": "Gen Z",
+          "values": {
+            "military_force": {
+              "all_americans": {
+                "current": 28.9,
+                "prior": 24.2
+              },
+              "with_view": {
+                "current": 32.4,
+                "prior": 28.8
+              }
+            },
+            "diplomacy": {
+              "all_americans": {
+                "current": 26,
+                "prior": 30.1
+              },
+              "with_view": {
+                "current": 29.1,
+                "prior": 35.9
+              }
+            },
+            "less_involved": {
+              "all_americans": {
+                "current": 34.3,
+                "prior": 29.7
+              },
+              "with_view": {
+                "current": 38.4,
+                "prior": 35.3
+              }
+            },
+            "diplomacy_plus_less_involved_norm": {
+              "all_americans": {
+                "current": 60.2,
+                "prior": 59.8
+              },
+              "with_view": {
+                "current": 67.6,
+                "prior": 71.2
+              }
+            },
+            "unsure": {
+              "all_americans": {
+                "current": 10.9,
+                "prior": 16
+              },
+              "with_view": {
+                "current": null,
+                "prior": null
+              }
+            }
+          }
+        },
+        {
+          "id": "Millennials",
+          "label": "Millennials",
+          "values": {
+            "military_force": {
+              "all_americans": {
+                "current": 29.6,
+                "prior": 26.1
+              },
+              "with_view": {
+                "current": 33.4,
+                "prior": 30.8
+              }
+            },
+            "diplomacy": {
+              "all_americans": {
+                "current": 25.2,
+                "prior": 29.9
+              },
+              "with_view": {
+                "current": 28.4,
+                "prior": 35.3
+              }
+            },
+            "less_involved": {
+              "all_americans": {
+                "current": 33.9,
+                "prior": 28.6
+              },
+              "with_view": {
+                "current": 38.2,
+                "prior": 33.8
+              }
+            },
+            "diplomacy_plus_less_involved_norm": {
+              "all_americans": {
+                "current": 59.1,
+                "prior": 58.6
+              },
+              "with_view": {
+                "current": 66.6,
+                "prior": 69.2
+              }
+            },
+            "unsure": {
+              "all_americans": {
+                "current": 11.2,
+                "prior": 15.3
+              },
+              "with_view": {
+                "current": null,
+                "prior": null
+              }
+            }
+          }
+        },
+        {
+          "id": "Gen X",
+          "label": "Gen X",
+          "values": {
+            "military_force": {
+              "all_americans": {
+                "current": 31.5,
+                "prior": 24.9
+              },
+              "with_view": {
+                "current": 36,
+                "prior": 30.3
+              }
+            },
+            "diplomacy": {
+              "all_americans": {
+                "current": 23.6,
+                "prior": 29.3
+              },
+              "with_view": {
+                "current": 26.9,
+                "prior": 35.7
+              }
+            },
+            "less_involved": {
+              "all_americans": {
+                "current": 32.5,
+                "prior": 27.9
+              },
+              "with_view": {
+                "current": 37.1,
+                "prior": 34
+              }
+            },
+            "diplomacy_plus_less_involved_norm": {
+              "all_americans": {
+                "current": 56.1,
+                "prior": 57.2
+              },
+              "with_view": {
+                "current": 64,
+                "prior": 69.7
+              }
+            },
+            "unsure": {
+              "all_americans": {
+                "current": 12.4,
+                "prior": 17.8
+              },
+              "with_view": {
+                "current": null,
+                "prior": null
+              }
+            }
+          }
+        },
+        {
+          "id": "Baby Boomers",
+          "label": "Baby Boomers",
+          "values": {
+            "military_force": {
+              "all_americans": {
+                "current": 37.5,
+                "prior": 26.7
+              },
+              "with_view": {
+                "current": 40.9,
+                "prior": 30.9
+              }
+            },
+            "diplomacy": {
+              "all_americans": {
+                "current": 29.3,
+                "prior": 35.2
+              },
+              "with_view": {
+                "current": 31.9,
+                "prior": 40.6
+              }
+            },
+            "less_involved": {
+              "all_americans": {
+                "current": 24.9,
+                "prior": 24.7
+              },
+              "with_view": {
+                "current": 27.2,
+                "prior": 28.5
+              }
+            },
+            "diplomacy_plus_less_involved_norm": {
+              "all_americans": {
+                "current": 54.2,
+                "prior": 59.9
+              },
+              "with_view": {
+                "current": 59.1,
+                "prior": 69.1
+              }
+            },
+            "unsure": {
+              "all_americans": {
+                "current": 8.2,
+                "prior": 13.4
+              },
+              "with_view": {
+                "current": null,
+                "prior": null
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "race",
+      "label": "Race",
+      "metrics": [
+        {
+          "id": "military_force",
+          "label": "The U.S. should have used military force",
+          "color": "#c46525"
+        },
+        {
+          "id": "diplomacy",
+          "label": "The U.S. should have used diplomacy and sanctions",
+          "color": "#1a6b73"
+        },
+        {
+          "id": "less_involved",
+          "label": "The U.S. should have taken a less involved role in the situation with Iran",
+          "color": "#5a7d9a"
+        },
+        {
+          "id": "diplomacy_plus_less_involved_norm",
+          "label": "The U.S. should have used diplomacy and sanctions + The U.S. should have taken a less involved role in the situation with Iran",
+          "color": "#1a6b73"
+        },
+        {
+          "id": "unsure",
+          "label": "Unsure",
+          "color": "#a8b5c4"
+        }
+      ],
+      "rows": [
+        {
+          "id": "White",
+          "label": "White",
+          "values": {
+            "military_force": {
+              "all_americans": {
+                "current": 37.5,
+                "prior": 27.9
+              },
+              "with_view": {
+                "current": 41.9,
+                "prior": 32.7
+              }
+            },
+            "diplomacy": {
+              "all_americans": {
+                "current": 25.1,
+                "prior": 31.4
+              },
+              "with_view": {
+                "current": 28,
+                "prior": 36.8
+              }
+            },
+            "less_involved": {
+              "all_americans": {
+                "current": 27,
+                "prior": 26
+              },
+              "with_view": {
+                "current": 30.1,
+                "prior": 30.5
+              }
+            },
+            "diplomacy_plus_less_involved_norm": {
+              "all_americans": {
+                "current": 52.1,
+                "prior": 57.3
+              },
+              "with_view": {
+                "current": 58.1,
+                "prior": 67.3
+              }
+            },
+            "unsure": {
+              "all_americans": {
+                "current": 10.3,
+                "prior": 14.7
+              },
+              "with_view": {
+                "current": null,
+                "prior": null
+              }
+            }
+          }
+        },
+        {
+          "id": "Black",
+          "label": "Black",
+          "values": {
+            "military_force": {
+              "all_americans": {
+                "current": 15.2,
+                "prior": 15.5
+              },
+              "with_view": {
+                "current": 17,
+                "prior": 19.4
+              }
+            },
+            "diplomacy": {
+              "all_americans": {
+                "current": 32.8,
+                "prior": 30.7
+              },
+              "with_view": {
+                "current": 36.7,
+                "prior": 38.4
+              }
+            },
+            "less_involved": {
+              "all_americans": {
+                "current": 41.4,
+                "prior": 33.7
+              },
+              "with_view": {
+                "current": 46.3,
+                "prior": 42.2
+              }
+            },
+            "diplomacy_plus_less_involved_norm": {
+              "all_americans": {
+                "current": 74.2,
+                "prior": 64.4
+              },
+              "with_view": {
+                "current": 83,
+                "prior": 80.6
+              }
+            },
+            "unsure": {
+              "all_americans": {
+                "current": 10.6,
+                "prior": 20.1
+              },
+              "with_view": {
+                "current": null,
+                "prior": null
+              }
+            }
+          }
+        },
+        {
+          "id": "Hispanic",
+          "label": "Hispanic",
+          "values": {
+            "military_force": {
+              "all_americans": {
+                "current": 21.2,
+                "prior": 22.4
+              },
+              "with_view": {
+                "current": 23.9,
+                "prior": 26.4
+              }
+            },
+            "diplomacy": {
+              "all_americans": {
+                "current": 27.1,
+                "prior": 34.5
+              },
+              "with_view": {
+                "current": 30.5,
+                "prior": 40.7
+              }
+            },
+            "less_involved": {
+              "all_americans": {
+                "current": 40.5,
+                "prior": 27.9
+              },
+              "with_view": {
+                "current": 45.6,
+                "prior": 32.9
+              }
+            },
+            "diplomacy_plus_less_involved_norm": {
+              "all_americans": {
+                "current": 67.6,
+                "prior": 62.4
+              },
+              "with_view": {
+                "current": 76.1,
+                "prior": 73.6
+              }
+            },
+            "unsure": {
+              "all_americans": {
+                "current": 11.2,
+                "prior": 15.2
+              },
+              "with_view": {
+                "current": null,
+                "prior": null
+              }
+            }
+          }
+        },
+        {
+          "id": "Other",
+          "label": "Other",
+          "values": {
+            "military_force": {
+              "all_americans": {
+                "current": 30,
+                "prior": 23.9
+              },
+              "with_view": {
+                "current": 32.9,
+                "prior": 28.1
+              }
+            },
+            "diplomacy": {
+              "all_americans": {
+                "current": 29.8,
+                "prior": 32.1
+              },
+              "with_view": {
+                "current": 32.7,
+                "prior": 37.8
+              }
+            },
+            "less_involved": {
+              "all_americans": {
+                "current": 31.3,
+                "prior": 29
+              },
+              "with_view": {
+                "current": 34.3,
+                "prior": 34.1
+              }
+            },
+            "diplomacy_plus_less_involved_norm": {
+              "all_americans": {
+                "current": 61.1,
+                "prior": 61.1
+              },
+              "with_view": {
+                "current": 67.1,
+                "prior": 71.9
+              }
+            },
+            "unsure": {
+              "all_americans": {
+                "current": 8.9,
+                "prior": 15
+              },
+              "with_view": {
+                "current": null,
+                "prior": null
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "education",
+      "label": "Education",
+      "metrics": [
+        {
+          "id": "military_force",
+          "label": "The U.S. should have used military force",
+          "color": "#c46525"
+        },
+        {
+          "id": "diplomacy",
+          "label": "The U.S. should have used diplomacy and sanctions",
+          "color": "#1a6b73"
+        },
+        {
+          "id": "less_involved",
+          "label": "The U.S. should have taken a less involved role in the situation with Iran",
+          "color": "#5a7d9a"
+        },
+        {
+          "id": "diplomacy_plus_less_involved_norm",
+          "label": "The U.S. should have used diplomacy and sanctions + The U.S. should have taken a less involved role in the situation with Iran",
+          "color": "#1a6b73"
+        },
+        {
+          "id": "unsure",
+          "label": "Unsure",
+          "color": "#a8b5c4"
+        }
+      ],
+      "rows": [
+        {
+          "id": "No college",
+          "label": "No college",
+          "values": {
+            "military_force": {
+              "all_americans": {
+                "current": 32,
+                "prior": 25.7
+              },
+              "with_view": {
+                "current": 36.9,
+                "prior": 31.1
+              }
+            },
+            "diplomacy": {
+              "all_americans": {
+                "current": 22.5,
+                "prior": 30.2
+              },
+              "with_view": {
+                "current": 25.9,
+                "prior": 36.5
+              }
+            },
+            "less_involved": {
+              "all_americans": {
+                "current": 32.3,
+                "prior": 26.8
+              },
+              "with_view": {
+                "current": 37.2,
+                "prior": 32.4
+              }
+            },
+            "diplomacy_plus_less_involved_norm": {
+              "all_americans": {
+                "current": 54.8,
+                "prior": 57
+              },
+              "with_view": {
+                "current": 63.1,
+                "prior": 68.9
+              }
+            },
+            "unsure": {
+              "all_americans": {
+                "current": 13.1,
+                "prior": 17.4
+              },
+              "with_view": {
+                "current": null,
+                "prior": null
+              }
+            }
+          }
+        },
+        {
+          "id": "College completed",
+          "label": "College completed",
+          "values": {
+            "military_force": {
+              "all_americans": {
+                "current": 31.8,
+                "prior": 25.7
+              },
+              "with_view": {
+                "current": 34.7,
+                "prior": 29.7
+              }
+            },
+            "diplomacy": {
+              "all_americans": {
+                "current": 30.2,
+                "prior": 33.2
+              },
+              "with_view": {
+                "current": 32.9,
+                "prior": 38.4
+              }
+            },
+            "less_involved": {
+              "all_americans": {
+                "current": 29.6,
+                "prior": 27.6
+              },
+              "with_view": {
+                "current": 32.4,
+                "prior": 31.9
+              }
+            },
+            "diplomacy_plus_less_involved_norm": {
+              "all_americans": {
+                "current": 59.8,
+                "prior": 60.8
+              },
+              "with_view": {
+                "current": 65.3,
+                "prior": 70.3
+              }
+            },
+            "unsure": {
+              "all_americans": {
+                "current": 8.4,
+                "prior": 13.5
+              },
+              "with_view": {
+                "current": null,
+                "prior": null
+              }
+            }
+          }
+        },
+        {
+          "id": "Graduate/professional degree",
+          "label": "Graduate/professional degree",
+          "values": {
+            "military_force": {
+              "all_americans": {
+                "current": 39.7,
+                "prior": 26.4
+              },
+              "with_view": {
+                "current": 44.3,
+                "prior": 31.8
+              }
+            },
+            "diplomacy": {
+              "all_americans": {
+                "current": 22.4,
+                "prior": 30.2
+              },
+              "with_view": {
+                "current": 25,
+                "prior": 36.4
+              }
+            },
+            "less_involved": {
+              "all_americans": {
+                "current": 27.4,
+                "prior": 26.4
+              },
+              "with_view": {
+                "current": 30.6,
+                "prior": 31.8
+              }
+            },
+            "diplomacy_plus_less_involved_norm": {
+              "all_americans": {
+                "current": 49.8,
+                "prior": 56.6
+              },
+              "with_view": {
+                "current": 55.7,
+                "prior": 68.2
+              }
+            },
+            "unsure": {
+              "all_americans": {
+                "current": 10.5,
+                "prior": 17
+              },
+              "with_view": {
+                "current": null,
+                "prior": null
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "rus_code",
+      "label": "Rural/Urban/Suburban",
+      "metrics": [
+        {
+          "id": "military_force",
+          "label": "The U.S. should have used military force",
+          "color": "#c46525"
+        },
+        {
+          "id": "diplomacy",
+          "label": "The U.S. should have used diplomacy and sanctions",
+          "color": "#1a6b73"
+        },
+        {
+          "id": "less_involved",
+          "label": "The U.S. should have taken a less involved role in the situation with Iran",
+          "color": "#5a7d9a"
+        },
+        {
+          "id": "diplomacy_plus_less_involved_norm",
+          "label": "The U.S. should have used diplomacy and sanctions + The U.S. should have taken a less involved role in the situation with Iran",
+          "color": "#1a6b73"
+        },
+        {
+          "id": "unsure",
+          "label": "Unsure",
+          "color": "#a8b5c4"
+        }
+      ],
+      "rows": [
+        {
+          "id": "Rural",
+          "label": "Rural",
+          "values": {
+            "military_force": {
+              "all_americans": {
+                "current": 39,
+                "prior": 28.2
+              },
+              "with_view": {
+                "current": 43.8,
+                "prior": 33.3
+              }
+            },
+            "diplomacy": {
+              "all_americans": {
+                "current": 23.3,
+                "prior": 31.3
+              },
+              "with_view": {
+                "current": 26.1,
+                "prior": 36.9
+              }
+            },
+            "less_involved": {
+              "all_americans": {
+                "current": 26.8,
+                "prior": 25.3
+              },
+              "with_view": {
+                "current": 30.1,
+                "prior": 29.8
+              }
+            },
+            "diplomacy_plus_less_involved_norm": {
+              "all_americans": {
+                "current": 50.1,
+                "prior": 56.5
+              },
+              "with_view": {
+                "current": 56.2,
+                "prior": 66.7
+              }
+            },
+            "unsure": {
+              "all_americans": {
+                "current": 10.9,
+                "prior": 15.3
+              },
+              "with_view": {
+                "current": null,
+                "prior": null
+              }
+            }
+          }
+        },
+        {
+          "id": "Suburban",
+          "label": "Suburban",
+          "values": {
+            "military_force": {
+              "all_americans": {
+                "current": 35.7,
+                "prior": 28
+              },
+              "with_view": {
+                "current": 39.8,
+                "prior": 33.1
+              }
+            },
+            "diplomacy": {
+              "all_americans": {
+                "current": 25.4,
+                "prior": 30.5
+              },
+              "with_view": {
+                "current": 28.3,
+                "prior": 36.1
+              }
+            },
+            "less_involved": {
+              "all_americans": {
+                "current": 28.6,
+                "prior": 26
+              },
+              "with_view": {
+                "current": 31.9,
+                "prior": 30.7
+              }
+            },
+            "diplomacy_plus_less_involved_norm": {
+              "all_americans": {
+                "current": 54,
+                "prior": 56.5
+              },
+              "with_view": {
+                "current": 60.2,
+                "prior": 66.9
+              }
+            },
+            "unsure": {
+              "all_americans": {
+                "current": 10.3,
+                "prior": 15.5
+              },
+              "with_view": {
+                "current": null,
+                "prior": null
+              }
+            }
+          }
+        },
+        {
+          "id": "Urban",
+          "label": "Urban",
+          "values": {
+            "military_force": {
+              "all_americans": {
+                "current": 24.6,
+                "prior": 21.2
+              },
+              "with_view": {
+                "current": 27.4,
+                "prior": 25
+              }
+            },
+            "diplomacy": {
+              "all_americans": {
+                "current": 30.2,
+                "prior": 33.5
+              },
+              "with_view": {
+                "current": 33.6,
+                "prior": 39.5
+              }
+            },
+            "less_involved": {
+              "all_americans": {
+                "current": 35.2,
+                "prior": 30.1
+              },
+              "with_view": {
+                "current": 39.1,
+                "prior": 35.5
+              }
+            },
+            "diplomacy_plus_less_involved_norm": {
+              "all_americans": {
+                "current": 65.4,
+                "prior": 63.6
+              },
+              "with_view": {
+                "current": 72.6,
+                "prior": 75
+              }
+            },
+            "unsure": {
+              "all_americans": {
+                "current": 10,
+                "prior": 15.2
+              },
+              "with_view": {
+                "current": null,
+                "prior": null
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "income",
+      "label": "Income",
+      "metrics": [
+        {
+          "id": "military_force",
+          "label": "The U.S. should have used military force",
+          "color": "#c46525"
+        },
+        {
+          "id": "diplomacy",
+          "label": "The U.S. should have used diplomacy and sanctions",
+          "color": "#1a6b73"
+        },
+        {
+          "id": "less_involved",
+          "label": "The U.S. should have taken a less involved role in the situation with Iran",
+          "color": "#5a7d9a"
+        },
+        {
+          "id": "diplomacy_plus_less_involved_norm",
+          "label": "The U.S. should have used diplomacy and sanctions + The U.S. should have taken a less involved role in the situation with Iran",
+          "color": "#1a6b73"
+        },
+        {
+          "id": "unsure",
+          "label": "Unsure",
+          "color": "#a8b5c4"
+        }
+      ],
+      "rows": [
+        {
+          "id": "Poor (less than 35k)",
+          "label": "< $35k",
+          "values": {
+            "military_force": {
+              "all_americans": {
+                "current": 31.3,
+                "prior": 25
+              },
+              "with_view": {
+                "current": 35.9,
+                "prior": 30
+              }
+            },
+            "diplomacy": {
+              "all_americans": {
+                "current": 25.1,
+                "prior": 31.1
+              },
+              "with_view": {
+                "current": 28.7,
+                "prior": 37.3
+              }
+            },
+            "less_involved": {
+              "all_americans": {
+                "current": 30.8,
+                "prior": 27.2
+              },
+              "with_view": {
+                "current": 35.3,
+                "prior": 32.7
+              }
+            },
+            "diplomacy_plus_less_involved_norm": {
+              "all_americans": {
+                "current": 55.9,
+                "prior": 58.3
+              },
+              "with_view": {
+                "current": 64.1,
+                "prior": 70
+              }
+            },
+            "unsure": {
+              "all_americans": {
+                "current": 12.8,
+                "prior": 16.7
+              },
+              "with_view": {
+                "current": null,
+                "prior": null
+              }
+            }
+          }
+        },
+        {
+          "id": "Below median (35k to less than 75k)",
+          "label": "$35k-$75k",
+          "values": {
+            "military_force": {
+              "all_americans": {
+                "current": 32.2,
+                "prior": 24.7
+              },
+              "with_view": {
+                "current": 37.1,
+                "prior": 29
+              }
+            },
+            "diplomacy": {
+              "all_americans": {
+                "current": 24.2,
+                "prior": 33.3
+              },
+              "with_view": {
+                "current": 27.9,
+                "prior": 39.2
+              }
+            },
+            "less_involved": {
+              "all_americans": {
+                "current": 30.5,
+                "prior": 27.1
+              },
+              "with_view": {
+                "current": 35,
+                "prior": 31.8
+              }
+            },
+            "diplomacy_plus_less_involved_norm": {
+              "all_americans": {
+                "current": 54.7,
+                "prior": 60.4
+              },
+              "with_view": {
+                "current": 62.9,
+                "prior": 71
+              }
+            },
+            "unsure": {
+              "all_americans": {
+                "current": 13.1,
+                "prior": 14.9
+              },
+              "with_view": {
+                "current": null,
+                "prior": null
+              }
+            }
+          }
+        },
+        {
+          "id": "Above median (75k to less than 125k)",
+          "label": "$75k-$125k",
+          "values": {
+            "military_force": {
+              "all_americans": {
+                "current": 37.9,
+                "prior": 26.7
+              },
+              "with_view": {
+                "current": 42.1,
+                "prior": 31.6
+              }
+            },
+            "diplomacy": {
+              "all_americans": {
+                "current": 24.5,
+                "prior": 31.1
+              },
+              "with_view": {
+                "current": 27.2,
+                "prior": 36.7
+              }
+            },
+            "less_involved": {
+              "all_americans": {
+                "current": 27.7,
+                "prior": 26.8
+              },
+              "with_view": {
+                "current": 30.7,
+                "prior": 31.7
+              }
+            },
+            "diplomacy_plus_less_involved_norm": {
+              "all_americans": {
+                "current": 52.2,
+                "prior": 57.9
+              },
+              "with_view": {
+                "current": 57.9,
+                "prior": 68.4
+              }
+            },
+            "unsure": {
+              "all_americans": {
+                "current": 9.8,
+                "prior": 15.3
+              },
+              "with_view": {
+                "current": null,
+                "prior": null
+              }
+            }
+          }
+        },
+        {
+          "id": "Rich (more than 125k)",
+          "label": "> $125k",
+          "values": {
+            "military_force": {
+              "all_americans": {
+                "current": 31.4,
+                "prior": 26.1
+              },
+              "with_view": {
+                "current": 34.5,
+                "prior": 30.8
+              }
+            },
+            "diplomacy": {
+              "all_americans": {
+                "current": 28.6,
+                "prior": 31.2
+              },
+              "with_view": {
+                "current": 31.3,
+                "prior": 36.9
+              }
+            },
+            "less_involved": {
+              "all_americans": {
+                "current": 31.2,
+                "prior": 27.3
+              },
+              "with_view": {
+                "current": 34.2,
+                "prior": 32.2
+              }
+            },
+            "diplomacy_plus_less_involved_norm": {
+              "all_americans": {
+                "current": 59.8,
+                "prior": 58.5
+              },
+              "with_view": {
+                "current": 65.5,
+                "prior": 69.2
+              }
+            },
+            "unsure": {
+              "all_americans": {
+                "current": 8.8,
+                "prior": 15.4
+              },
+              "with_view": {
+                "current": null,
+                "prior": null
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "religion",
+      "label": "Religion",
+      "metrics": [
+        {
+          "id": "military_force",
+          "label": "The U.S. should have used military force",
+          "color": "#c46525"
+        },
+        {
+          "id": "diplomacy",
+          "label": "The U.S. should have used diplomacy and sanctions",
+          "color": "#1a6b73"
+        },
+        {
+          "id": "less_involved",
+          "label": "The U.S. should have taken a less involved role in the situation with Iran",
+          "color": "#5a7d9a"
+        },
+        {
+          "id": "diplomacy_plus_less_involved_norm",
+          "label": "The U.S. should have used diplomacy and sanctions + The U.S. should have taken a less involved role in the situation with Iran",
+          "color": "#1a6b73"
+        },
+        {
+          "id": "unsure",
+          "label": "Unsure",
+          "color": "#a8b5c4"
+        }
+      ],
+      "rows": [
+        {
+          "id": "Protestant",
+          "label": "Protestant",
+          "values": {
+            "military_force": {
+              "all_americans": {
+                "current": 38.1,
+                "prior": 27.5
+              },
+              "with_view": {
+                "current": 42,
+                "prior": 32.2
+              }
+            },
+            "diplomacy": {
+              "all_americans": {
+                "current": 25.2,
+                "prior": 32.4
+              },
+              "with_view": {
+                "current": 27.8,
+                "prior": 37.9
+              }
+            },
+            "less_involved": {
+              "all_americans": {
+                "current": 27.4,
+                "prior": 25.6
+              },
+              "with_view": {
+                "current": 30.2,
+                "prior": 29.9
+              }
+            },
+            "diplomacy_plus_less_involved_norm": {
+              "all_americans": {
+                "current": 52.6,
+                "prior": 57.9
+              },
+              "with_view": {
+                "current": 58,
+                "prior": 67.8
+              }
+            },
+            "unsure": {
+              "all_americans": {
+                "current": 9.3,
+                "prior": 14.6
+              },
+              "with_view": {
+                "current": null,
+                "prior": null
+              }
+            }
+          }
+        },
+        {
+          "id": "Catholic",
+          "label": "Catholic",
+          "values": {
+            "military_force": {
+              "all_americans": {
+                "current": 31.5,
+                "prior": 26.5
+              },
+              "with_view": {
+                "current": 35.1,
+                "prior": 31
+              }
+            },
+            "diplomacy": {
+              "all_americans": {
+                "current": 27.2,
+                "prior": 32.5
+              },
+              "with_view": {
+                "current": 30.2,
+                "prior": 37.9
+              }
+            },
+            "less_involved": {
+              "all_americans": {
+                "current": 31.1,
+                "prior": 26.6
+              },
+              "with_view": {
+                "current": 34.6,
+                "prior": 31
+              }
+            },
+            "diplomacy_plus_less_involved_norm": {
+              "all_americans": {
+                "current": 58.3,
+                "prior": 59
+              },
+              "with_view": {
+                "current": 64.9,
+                "prior": 69
+              }
+            },
+            "unsure": {
+              "all_americans": {
+                "current": 10.2,
+                "prior": 14.4
+              },
+              "with_view": {
+                "current": null,
+                "prior": null
+              }
+            }
+          }
+        },
+        {
+          "id": "Other religion",
+          "label": "Other religion",
+          "values": {
+            "military_force": {
+              "all_americans": {
+                "current": 29.4,
+                "prior": 27.4
+              },
+              "with_view": {
+                "current": 33.7,
+                "prior": 31.9
+              }
+            },
+            "diplomacy": {
+              "all_americans": {
+                "current": 27,
+                "prior": 31
+              },
+              "with_view": {
+                "current": 31,
+                "prior": 36
+              }
+            },
+            "less_involved": {
+              "all_americans": {
+                "current": 30.8,
+                "prior": 27.6
+              },
+              "with_view": {
+                "current": 35.3,
+                "prior": 32.1
+              }
+            },
+            "diplomacy_plus_less_involved_norm": {
+              "all_americans": {
+                "current": 57.8,
+                "prior": 58.6
+              },
+              "with_view": {
+                "current": 66.3,
+                "prior": 68.1
+              }
+            },
+            "unsure": {
+              "all_americans": {
+                "current": 12.7,
+                "prior": 14
+              },
+              "with_view": {
+                "current": null,
+                "prior": null
+              }
+            }
+          }
+        },
+        {
+          "id": "Not religious",
+          "label": "Not religious",
+          "values": {
+            "military_force": {
+              "all_americans": {
+                "current": 26.6,
+                "prior": 22.1
+              },
+              "with_view": {
+                "current": 30.1,
+                "prior": 26.8
+              }
+            },
+            "diplomacy": {
+              "all_americans": {
+                "current": 27.7,
+                "prior": 30.4
+              },
+              "with_view": {
+                "current": 31.3,
+                "prior": 36.9
+              }
+            },
+            "less_involved": {
+              "all_americans": {
+                "current": 34.2,
+                "prior": 30
+              },
+              "with_view": {
+                "current": 38.7,
+                "prior": 36.4
+              }
+            },
+            "diplomacy_plus_less_involved_norm": {
+              "all_americans": {
+                "current": 61.8,
+                "prior": 60.4
+              },
+              "with_view": {
+                "current": 69.9,
+                "prior": 73.2
+              }
+            },
+            "unsure": {
+              "all_americans": {
+                "current": 11.6,
+                "prior": 17.6
+              },
+              "with_view": {
+                "current": null,
+                "prior": null
+              }
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

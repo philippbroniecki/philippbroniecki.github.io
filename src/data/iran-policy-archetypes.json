@@ -1,0 +1,1802 @@
+{
+  "defaultMetric": "military_force",
+  "modes": [
+    {
+      "id": "all_americans",
+      "label": "What all Americans said"
+    },
+    {
+      "id": "with_view",
+      "label": "What Americans with a view said"
+    }
+  ],
+  "metrics": [
+    {
+      "id": "military_force",
+      "label": "The U.S. should have used military force",
+      "color": "#c46525"
+    },
+    {
+      "id": "diplomacy",
+      "label": "The U.S. should have used diplomacy and sanctions",
+      "color": "#1a6b73"
+    },
+    {
+      "id": "less_involved",
+      "label": "The U.S. should have taken a less involved role in the situation with Iran",
+      "color": "#5a7d9a"
+    },
+    {
+      "id": "diplomacy_plus_less_involved_norm",
+      "label": "The U.S. should have used diplomacy and sanctions + The U.S. should have taken a less involved role in the situation with Iran",
+      "color": "#1a6b73"
+    },
+    {
+      "id": "unsure",
+      "label": "Unsure",
+      "color": "#a8b5c4"
+    }
+  ],
+  "entriesByMetric": {
+    "military_force": [
+      {
+        "key": "soccer_moms",
+        "label": "Soccer Moms",
+        "subtitle": "Female, Suburban, College completed or Graduate degree, White",
+        "rationale": "The single most-watched voter group in American politics since the 1990s. Swung toward Democrats in 2018/2020, shifted back in parts of 2024. Their education level, suburban geography, and sensitivity to tone/culture-war issues make them the ultimate bellwether for competitive House and Senate races nationwide.",
+        "all_americans": {
+          "current": 37.2,
+          "prior": 25.3
+        },
+        "with_view": {
+          "current": 41.7,
+          "prior": 30.6
+        }
+      },
+      {
+        "key": "white_working_class",
+        "label": "White Working Class",
+        "subtitle": "White, No college",
+        "rationale": "The realignment story of the last decade. This group's shift from Obama to Trump remade the electoral map. Any erosion or consolidation in this bloc makes front-page news because it directly determines outcomes in PA, MI, WI, and Sun Belt exurbs.",
+        "all_americans": {
+          "current": 37.6,
+          "prior": 28.3
+        },
+        "with_view": {
+          "current": 43.3,
+          "prior": 34
+        }
+      },
+      {
+        "key": "barstool_conservatives",
+        "label": "Barstool Conservatives",
+        "subtitle": "Male, Gen X or Millennials, No college or College completed, Republican or Other party",
+        "rationale": "Culturally conservative but socially libertarian \u2014 anti-woke but pro-choice, pro-legal weed, pro-gambling. Credited with helping propel Trump to victory in 2024 through alternative media (Rogan, Barstool Sports, UFC). Not church-right but vibes-right. Their turnout and enthusiasm is a leading indicator of populist energy, and both parties are now scrambling to understand them.",
+        "all_americans": {
+          "current": 42.8,
+          "prior": 35.6
+        },
+        "with_view": {
+          "current": 47.6,
+          "prior": 39.9
+        }
+      },
+      {
+        "key": "disaffected_young_men",
+        "label": "Disaffected Young Men",
+        "subtitle": "Male, Gen Z or Millennials, Other party affiliation",
+        "rationale": "The emerging wildcard of American elections. Low-propensity, politically homeless, over-indexed on alternative media. Both parties competing for them. Their turnout alone can shift margins by 2-4 points in swing states.",
+        "all_americans": {
+          "current": 33.7,
+          "prior": 28.8
+        },
+        "with_view": {
+          "current": 38.2,
+          "prior": 32.8
+        }
+      },
+      {
+        "key": "black_church_women",
+        "label": "Black Women of Faith",
+        "subtitle": "Female, Black, Protestant, Democrat",
+        "rationale": "The most reliable voting bloc in the Democratic coalition. When their turnout dips even slightly, Democrats lose. Media tracks their enthusiasm as a proxy for the health of the entire Democratic operation.",
+        "all_americans": {
+          "current": 12.7,
+          "prior": 11.8
+        },
+        "with_view": {
+          "current": 14.3,
+          "prior": 15.4
+        }
+      },
+      {
+        "key": "hispanic_working_class_men",
+        "label": "Hispanic Working Class",
+        "subtitle": "Male, Hispanic, No college",
+        "rationale": "The fastest-moving demographic in American politics. Their rightward shift in 2020 and 2024 caught both parties off guard. This group's trajectory determines whether the Sun Belt stays competitive or locks in for one party.",
+        "all_americans": {
+          "current": 23.9,
+          "prior": 26
+        },
+        "with_view": {
+          "current": 27,
+          "prior": 29.7
+        }
+      },
+      {
+        "key": "evangelical_republicans",
+        "label": "Evangelical Republicans",
+        "subtitle": "Republican, Protestant",
+        "rationale": "The floor of the Republican coalition. Their mobilization determines whether GOP candidates hit their targets in virtually every state. Post-Dobbs, media watches whether this group stays energized or fractures over candidate quality.",
+        "all_americans": {
+          "current": 55.4,
+          "prior": 38.3
+        },
+        "with_view": {
+          "current": 60.3,
+          "prior": 43.7
+        }
+      },
+      {
+        "key": "rural_red_wall",
+        "label": "MAGA Country",
+        "subtitle": "Rural, Republican, White, No college",
+        "rationale": "The margin machine for Republicans. Their ever-increasing turnout in non-metro areas offsets Democratic gains in suburbs. Media covers them as the cultural heartbeat of the populist right. Any sign of turnout fatigue here is a major story.",
+        "all_americans": {
+          "current": 53,
+          "prior": 37.6
+        },
+        "with_view": {
+          "current": 60,
+          "prior": 43.9
+        }
+      },
+      {
+        "key": "genz_progressives",
+        "label": "TikTok Left",
+        "subtitle": "Gen Z, Democrat",
+        "rationale": "The energy wing of the Democratic base. Their enthusiasm on climate, student debt, and social issues translates to volunteer hours, small-dollar donations, and turnout in college towns. When disengaged, Democratic margins collapse.",
+        "all_americans": {
+          "current": 14.9,
+          "prior": 16.2
+        },
+        "with_view": {
+          "current": 16.3,
+          "prior": 19.5
+        }
+      },
+      {
+        "key": "swing_moderates",
+        "label": "Costco Centrists",
+        "subtitle": "Suburban, Other party affiliation",
+        "rationale": "The persuadable middle that both parties need. Not ideological, but they vote. Media uses them as the 'normal person' stand-in \u2014 decides based on gas prices, grocery costs, and vibes, not policy papers.",
+        "all_americans": {
+          "current": 33.2,
+          "prior": 25.5
+        },
+        "with_view": {
+          "current": 38.8,
+          "prior": 30.8
+        }
+      },
+      {
+        "key": "tradwifes",
+        "label": "Tradwifes",
+        "subtitle": "Female, Millennials or Gen Z, Republican, Protestant or Catholic, Suburban or Rural",
+        "rationale": "A culturally ascendant archetype driven by social media. Embraces traditional gender roles, homemaking aesthetics, and conservative family values. Gained massive visibility in 2024 as a cultural counterpoint to progressive feminism. Media watches them because the tradwife trend was seen as a leading indicator of Trump's win among white women.",
+        "all_americans": {
+          "current": 49.6,
+          "prior": 33.5
+        },
+        "with_view": {
+          "current": 55.7,
+          "prior": 39.7
+        }
+      },
+      {
+        "key": "black_genz_men",
+        "label": "Young Black Men",
+        "subtitle": "Male, Black, Gen Z",
+        "rationale": "A small but symbolically enormous group. Any movement away from Democrats gets massive media coverage because it threatens a core assumption of the Democratic coalition. Even marginal shifts carry outsize narrative weight.",
+        "all_americans": {
+          "current": 16.2,
+          "prior": 18.5
+        },
+        "with_view": {
+          "current": 17.7,
+          "prior": 21.9
+        }
+      },
+      {
+        "key": "rich_suburb_republicans",
+        "label": "Country Club Republicans",
+        "subtitle": "Republican, Suburban, Rich (125k+), College completed or Graduate degree",
+        "rationale": "The Republican voters most likely to defect on candidate quality. Their movement in wealthy suburbs (Bucks County, Maricopa, Gwinnett) decided multiple swing states. If they hold for the GOP, the party is strong.",
+        "all_americans": {
+          "current": 51.4,
+          "prior": 39.9
+        },
+        "with_view": {
+          "current": 55.1,
+          "prior": 45.4
+        }
+      },
+      {
+        "key": "college_town_liberals",
+        "label": "Latte Liberals",
+        "subtitle": "Democrat, Urban, Graduate/professional degree",
+        "rationale": "The ideological anchor of the Democratic Party. Highly engaged, high-turnout, and the source of most progressive policy energy. When fired up, Democratic campaigns have money and volunteers.",
+        "all_americans": {
+          "current": 18,
+          "prior": 15.2
+        },
+        "with_view": {
+          "current": 19.9,
+          "prior": 18.4
+        }
+      },
+      {
+        "key": "latina_suburban_moms",
+        "label": "Hispanic Soccer Moms",
+        "subtitle": "Female, Hispanic, Suburban, College completed",
+        "rationale": "An emerging swing bloc. More moderate than progressive activists, more engaged than working-class Hispanic men. As Sun Belt suburbs diversify, this group increasingly determines outcomes in AZ, NV, and TX.",
+        "all_americans": {
+          "current": 21.4,
+          "prior": 21.4
+        },
+        "with_view": {
+          "current": 24.1,
+          "prior": 25.7
+        }
+      },
+      {
+        "key": "young_crypto_libertarians",
+        "label": "Tech Bros",
+        "subtitle": "Male, Gen Z or Millennials, Other party affiliation, Above median or Rich income",
+        "rationale": "A new force in campaign finance and online discourse. Mobilized around deregulation, crypto, and anti-establishment messaging. Their money and meme energy can shift narratives quickly.",
+        "all_americans": {
+          "current": 34.2,
+          "prior": 29.3
+        },
+        "with_view": {
+          "current": 38.2,
+          "prior": 33.3
+        }
+      },
+      {
+        "key": "catholic_swing_voters",
+        "label": "Kennedy Catholics",
+        "subtitle": "Catholic, Suburban or Urban",
+        "rationale": "The original swing demographic in American politics. White Catholics lean R, Hispanic Catholics are contested. Cross-pressured on abortion, immigration, and social welfare. Distributed across every swing state.",
+        "all_americans": {
+          "current": 29.7,
+          "prior": 25.7
+        },
+        "with_view": {
+          "current": 33,
+          "prior": 30.1
+        }
+      },
+      {
+        "key": "non_college_conservative_women",
+        "label": "Red State Women",
+        "subtitle": "Female, White, No college, Republican, Suburban or Rural",
+        "rationale": "Often overlooked in media's focus on college-educated suburban women. They are a massive and growing part of the Republican base. Their concerns \u2014 inflation, safety, family affordability \u2014 drive GOP messaging. Trump gained among them in 2024.",
+        "all_americans": {
+          "current": 49.5,
+          "prior": 32.8
+        },
+        "with_view": {
+          "current": 57.5,
+          "prior": 40.2
+        }
+      },
+      {
+        "key": "boomer_democrats",
+        "label": "Boomer Democrats",
+        "subtitle": "Boomers+, Democrat, College completed or Graduate degree",
+        "rationale": "The reliable turnout machine of the Democratic Party \u2014 they actually show up in midterms. Often overlooked for flashier demographics, but their consistency keeps Democrats competitive in off-year elections.",
+        "all_americans": {
+          "current": 18.2,
+          "prior": 13.2
+        },
+        "with_view": {
+          "current": 19.4,
+          "prior": 15.3
+        }
+      },
+      {
+        "key": "blue_collar_men",
+        "label": "Blue-Collar Men",
+        "subtitle": "Male, White, No college, Poor or Below median income, Suburban or Rural",
+        "rationale": "The kitchen-table economics voter. Cares about wages, trade, and cost of living more than culture war. Overlaps with but is distinct from Barstool Conservatives \u2014 these guys are family-first, not libertine. Their economic anxiety is a recurring media theme.",
+        "all_americans": {
+          "current": 43.1,
+          "prior": 34.4
+        },
+        "with_view": {
+          "current": 49.5,
+          "prior": 38.9
+        }
+      },
+      {
+        "key": "genx_forgotten_middle",
+        "label": "GenX Forgotten Middle",
+        "subtitle": "GenX, Other party affiliation, Suburban",
+        "rationale": "Perpetually overlooked in media that ping-pongs between Boomers and Gen Z. But GenX is in peak earning and voting years, and their independent streak makes them genuinely persuadable.",
+        "all_americans": {
+          "current": 31.1,
+          "prior": 24
+        },
+        "with_view": {
+          "current": 37.4,
+          "prior": 29.8
+        }
+      },
+      {
+        "key": "secular_suburbanites",
+        "label": "Secular Suburbanites",
+        "subtitle": "Suburban, Not religious, College completed or Graduate degree",
+        "rationale": "The fastest-growing religious demographic is no religion at all. As 'nones' concentrate in suburbs, they look like a coherent voting bloc \u2014 socially liberal, fiscally moderate, allergic to culture-war messaging.",
+        "all_americans": {
+          "current": 29.6,
+          "prior": 24.3
+        },
+        "with_view": {
+          "current": 32.9,
+          "prior": 29.1
+        }
+      },
+      {
+        "key": "poor_rural_democrats",
+        "label": "Poor Rural Democrats",
+        "subtitle": "Democrat, Rural, Poor (<35k)",
+        "rationale": "A shrinking but real constituency \u2014 complicates the narrative that rural = Republican. Concentrated in the Deep South Black Belt, Appalachian pockets, and Native communities. Mobilization matters in close Senate races.",
+        "all_americans": {
+          "current": 17.6,
+          "prior": 15.5
+        },
+        "with_view": {
+          "current": 20,
+          "prior": 19.2
+        }
+      },
+      {
+        "key": "wealthy_urban_progressives",
+        "label": "Six-Figure Socialists",
+        "subtitle": "Democrat, Urban, Rich (125k+), Graduate/professional degree",
+        "rationale": "The fundraising engine of the progressive movement. Their policy preferences drive Democratic platform priorities disproportionately. Their disconnect from working-class voters is itself a recurring story.",
+        "all_americans": {
+          "current": 17.2,
+          "prior": 15.7
+        },
+        "with_view": {
+          "current": 18.7,
+          "prior": 19.1
+        }
+      },
+      {
+        "key": "black_rural_working_class",
+        "label": "Black Rural Working Class",
+        "subtitle": "Black - rural - no college",
+        "rationale": "An overlooked but consequential bloc in the rural South and Black Belt. Their political weight can be felt in tight races across Georgia, North Carolina, Alabama, and Mississippi.",
+        "all_americans": {
+          "current": 19.2,
+          "prior": 16.6
+        },
+        "with_view": {
+          "current": 22.4,
+          "prior": 21.5
+        }
+      }
+    ],
+    "diplomacy": [
+      {
+        "key": "soccer_moms",
+        "label": "Soccer Moms",
+        "subtitle": "Female, Suburban, College completed or Graduate degree, White",
+        "rationale": "The single most-watched voter group in American politics since the 1990s. Swung toward Democrats in 2018/2020, shifted back in parts of 2024. Their education level, suburban geography, and sensitivity to tone/culture-war issues make them the ultimate bellwether for competitive House and Senate races nationwide.",
+        "all_americans": {
+          "current": 23.3,
+          "prior": 30.1
+        },
+        "with_view": {
+          "current": 26.1,
+          "prior": 36.5
+        }
+      },
+      {
+        "key": "white_working_class",
+        "label": "White Working Class",
+        "subtitle": "White, No college",
+        "rationale": "The realignment story of the last decade. This group's shift from Obama to Trump remade the electoral map. Any erosion or consolidation in this bloc makes front-page news because it directly determines outcomes in PA, MI, WI, and Sun Belt exurbs.",
+        "all_americans": {
+          "current": 21.1,
+          "prior": 29.7
+        },
+        "with_view": {
+          "current": 24.2,
+          "prior": 35.6
+        }
+      },
+      {
+        "key": "barstool_conservatives",
+        "label": "Barstool Conservatives",
+        "subtitle": "Male, Gen X or Millennials, No college or College completed, Republican or Other party",
+        "rationale": "Culturally conservative but socially libertarian \u2014 anti-woke but pro-choice, pro-legal weed, pro-gambling. Credited with helping propel Trump to victory in 2024 through alternative media (Rogan, Barstool Sports, UFC). Not church-right but vibes-right. Their turnout and enthusiasm is a leading indicator of populist energy, and both parties are now scrambling to understand them.",
+        "all_americans": {
+          "current": 24,
+          "prior": 28
+        },
+        "with_view": {
+          "current": 26.7,
+          "prior": 31.4
+        }
+      },
+      {
+        "key": "disaffected_young_men",
+        "label": "Disaffected Young Men",
+        "subtitle": "Male, Gen Z or Millennials, Other party affiliation",
+        "rationale": "The emerging wildcard of American elections. Low-propensity, politically homeless, over-indexed on alternative media. Both parties competing for them. Their turnout alone can shift margins by 2-4 points in swing states.",
+        "all_americans": {
+          "current": 27.2,
+          "prior": 28.4
+        },
+        "with_view": {
+          "current": 30.8,
+          "prior": 32.4
+        }
+      },
+      {
+        "key": "black_church_women",
+        "label": "Black Women of Faith",
+        "subtitle": "Female, Black, Protestant, Democrat",
+        "rationale": "The most reliable voting bloc in the Democratic coalition. When their turnout dips even slightly, Democrats lose. Media tracks their enthusiasm as a proxy for the health of the entire Democratic operation.",
+        "all_americans": {
+          "current": 29.8,
+          "prior": 29.7
+        },
+        "with_view": {
+          "current": 33.4,
+          "prior": 39
+        }
+      },
+      {
+        "key": "hispanic_working_class_men",
+        "label": "Hispanic Working Class",
+        "subtitle": "Male, Hispanic, No college",
+        "rationale": "The fastest-moving demographic in American politics. Their rightward shift in 2020 and 2024 caught both parties off guard. This group's trajectory determines whether the Sun Belt stays competitive or locks in for one party.",
+        "all_americans": {
+          "current": 27.4,
+          "prior": 34.9
+        },
+        "with_view": {
+          "current": 30.9,
+          "prior": 39.9
+        }
+      },
+      {
+        "key": "evangelical_republicans",
+        "label": "Evangelical Republicans",
+        "subtitle": "Republican, Protestant",
+        "rationale": "The floor of the Republican coalition. Their mobilization determines whether GOP candidates hit their targets in virtually every state. Post-Dobbs, media watches whether this group stays energized or fractures over candidate quality.",
+        "all_americans": {
+          "current": 18.5,
+          "prior": 28.5
+        },
+        "with_view": {
+          "current": 20.2,
+          "prior": 32.5
+        }
+      },
+      {
+        "key": "rural_red_wall",
+        "label": "MAGA Country",
+        "subtitle": "Rural, Republican, White, No college",
+        "rationale": "The margin machine for Republicans. Their ever-increasing turnout in non-metro areas offsets Democratic gains in suburbs. Media covers them as the cultural heartbeat of the populist right. Any sign of turnout fatigue here is a major story.",
+        "all_americans": {
+          "current": 15.6,
+          "prior": 27
+        },
+        "with_view": {
+          "current": 17.7,
+          "prior": 31.6
+        }
+      },
+      {
+        "key": "genz_progressives",
+        "label": "TikTok Left",
+        "subtitle": "Gen Z, Democrat",
+        "rationale": "The energy wing of the Democratic base. Their enthusiasm on climate, student debt, and social issues translates to volunteer hours, small-dollar donations, and turnout in college towns. When disengaged, Democratic margins collapse.",
+        "all_americans": {
+          "current": 32.4,
+          "prior": 35.4
+        },
+        "with_view": {
+          "current": 35.5,
+          "prior": 42.6
+        }
+      },
+      {
+        "key": "swing_moderates",
+        "label": "Costco Centrists",
+        "subtitle": "Suburban, Other party affiliation",
+        "rationale": "The persuadable middle that both parties need. Not ideological, but they vote. Media uses them as the 'normal person' stand-in \u2014 decides based on gas prices, grocery costs, and vibes, not policy papers.",
+        "all_americans": {
+          "current": 23.7,
+          "prior": 27.5
+        },
+        "with_view": {
+          "current": 27.6,
+          "prior": 33.2
+        }
+      },
+      {
+        "key": "tradwifes",
+        "label": "Tradwifes",
+        "subtitle": "Female, Millennials or Gen Z, Republican, Protestant or Catholic, Suburban or Rural",
+        "rationale": "A culturally ascendant archetype driven by social media. Embraces traditional gender roles, homemaking aesthetics, and conservative family values. Gained massive visibility in 2024 as a cultural counterpoint to progressive feminism. Media watches them because the tradwife trend was seen as a leading indicator of Trump's win among white women.",
+        "all_americans": {
+          "current": 15.7,
+          "prior": 26.8
+        },
+        "with_view": {
+          "current": 17.6,
+          "prior": 31.7
+        }
+      },
+      {
+        "key": "black_genz_men",
+        "label": "Young Black Men",
+        "subtitle": "Male, Black, Gen Z",
+        "rationale": "A small but symbolically enormous group. Any movement away from Democrats gets massive media coverage because it threatens a core assumption of the Democratic coalition. Even marginal shifts carry outsize narrative weight.",
+        "all_americans": {
+          "current": 36.6,
+          "prior": 31.7
+        },
+        "with_view": {
+          "current": 40,
+          "prior": 37.4
+        }
+      },
+      {
+        "key": "rich_suburb_republicans",
+        "label": "Country Club Republicans",
+        "subtitle": "Republican, Suburban, Rich (125k+), College completed or Graduate degree",
+        "rationale": "The Republican voters most likely to defect on candidate quality. Their movement in wealthy suburbs (Bucks County, Maricopa, Gwinnett) decided multiple swing states. If they hold for the GOP, the party is strong.",
+        "all_americans": {
+          "current": 22.6,
+          "prior": 26.6
+        },
+        "with_view": {
+          "current": 24.2,
+          "prior": 30.2
+        }
+      },
+      {
+        "key": "college_town_liberals",
+        "label": "Latte Liberals",
+        "subtitle": "Democrat, Urban, Graduate/professional degree",
+        "rationale": "The ideological anchor of the Democratic Party. Highly engaged, high-turnout, and the source of most progressive policy energy. When fired up, Democratic campaigns have money and volunteers.",
+        "all_americans": {
+          "current": 32.4,
+          "prior": 35.4
+        },
+        "with_view": {
+          "current": 35.8,
+          "prior": 43
+        }
+      },
+      {
+        "key": "latina_suburban_moms",
+        "label": "Hispanic Soccer Moms",
+        "subtitle": "Female, Hispanic, Suburban, College completed",
+        "rationale": "An emerging swing bloc. More moderate than progressive activists, more engaged than working-class Hispanic men. As Sun Belt suburbs diversify, this group increasingly determines outcomes in AZ, NV, and TX.",
+        "all_americans": {
+          "current": 25.9,
+          "prior": 32.9
+        },
+        "with_view": {
+          "current": 29.1,
+          "prior": 39.6
+        }
+      },
+      {
+        "key": "young_crypto_libertarians",
+        "label": "Tech Bros",
+        "subtitle": "Male, Gen Z or Millennials, Other party affiliation, Above median or Rich income",
+        "rationale": "A new force in campaign finance and online discourse. Mobilized around deregulation, crypto, and anti-establishment messaging. Their money and meme energy can shift narratives quickly.",
+        "all_americans": {
+          "current": 28.2,
+          "prior": 28.1
+        },
+        "with_view": {
+          "current": 31.4,
+          "prior": 31.9
+        }
+      },
+      {
+        "key": "catholic_swing_voters",
+        "label": "Kennedy Catholics",
+        "subtitle": "Catholic, Suburban or Urban",
+        "rationale": "The original swing demographic in American politics. White Catholics lean R, Hispanic Catholics are contested. Cross-pressured on abortion, immigration, and social welfare. Distributed across every swing state.",
+        "all_americans": {
+          "current": 28.1,
+          "prior": 32.6
+        },
+        "with_view": {
+          "current": 31.2,
+          "prior": 38.1
+        }
+      },
+      {
+        "key": "non_college_conservative_women",
+        "label": "Red State Women",
+        "subtitle": "Female, White, No college, Republican, Suburban or Rural",
+        "rationale": "Often overlooked in media's focus on college-educated suburban women. They are a massive and growing part of the Republican base. Their concerns \u2014 inflation, safety, family affordability \u2014 drive GOP messaging. Trump gained among them in 2024.",
+        "all_americans": {
+          "current": 14.1,
+          "prior": 26.5
+        },
+        "with_view": {
+          "current": 16.4,
+          "prior": 32.4
+        }
+      },
+      {
+        "key": "boomer_democrats",
+        "label": "Boomer Democrats",
+        "subtitle": "Boomers+, Democrat, College completed or Graduate degree",
+        "rationale": "The reliable turnout machine of the Democratic Party \u2014 they actually show up in midterms. Often overlooked for flashier demographics, but their consistency keeps Democrats competitive in off-year elections.",
+        "all_americans": {
+          "current": 42.1,
+          "prior": 43.8
+        },
+        "with_view": {
+          "current": 45,
+          "prior": 50.9
+        }
+      },
+      {
+        "key": "blue_collar_men",
+        "label": "Blue-Collar Men",
+        "subtitle": "Male, White, No college, Poor or Below median income, Suburban or Rural",
+        "rationale": "The kitchen-table economics voter. Cares about wages, trade, and cost of living more than culture war. Overlaps with but is distinct from Barstool Conservatives \u2014 these guys are family-first, not libertine. Their economic anxiety is a recurring media theme.",
+        "all_americans": {
+          "current": 21.2,
+          "prior": 30.9
+        },
+        "with_view": {
+          "current": 24.3,
+          "prior": 34.9
+        }
+      },
+      {
+        "key": "genx_forgotten_middle",
+        "label": "GenX Forgotten Middle",
+        "subtitle": "GenX, Other party affiliation, Suburban",
+        "rationale": "Perpetually overlooked in media that ping-pongs between Boomers and Gen Z. But GenX is in peak earning and voting years, and their independent streak makes them genuinely persuadable.",
+        "all_americans": {
+          "current": 21.8,
+          "prior": 25.8
+        },
+        "with_view": {
+          "current": 26.2,
+          "prior": 32.1
+        }
+      },
+      {
+        "key": "secular_suburbanites",
+        "label": "Secular Suburbanites",
+        "subtitle": "Suburban, Not religious, College completed or Graduate degree",
+        "rationale": "The fastest-growing religious demographic is no religion at all. As 'nones' concentrate in suburbs, they look like a coherent voting bloc \u2014 socially liberal, fiscally moderate, allergic to culture-war messaging.",
+        "all_americans": {
+          "current": 28.9,
+          "prior": 30
+        },
+        "with_view": {
+          "current": 32.1,
+          "prior": 36
+        }
+      },
+      {
+        "key": "poor_rural_democrats",
+        "label": "Poor Rural Democrats",
+        "subtitle": "Democrat, Rural, Poor (<35k)",
+        "rationale": "A shrinking but real constituency \u2014 complicates the narrative that rural = Republican. Concentrated in the Deep South Black Belt, Appalachian pockets, and Native communities. Mobilization matters in close Senate races.",
+        "all_americans": {
+          "current": 30.7,
+          "prior": 37.6
+        },
+        "with_view": {
+          "current": 34.9,
+          "prior": 46.4
+        }
+      },
+      {
+        "key": "wealthy_urban_progressives",
+        "label": "Six-Figure Socialists",
+        "subtitle": "Democrat, Urban, Rich (125k+), Graduate/professional degree",
+        "rationale": "The fundraising engine of the progressive movement. Their policy preferences drive Democratic platform priorities disproportionately. Their disconnect from working-class voters is itself a recurring story.",
+        "all_americans": {
+          "current": 34.3,
+          "prior": 34.8
+        },
+        "with_view": {
+          "current": 37.3,
+          "prior": 42.2
+        }
+      },
+      {
+        "key": "black_rural_working_class",
+        "label": "Black Rural Working Class",
+        "subtitle": "Black - rural - no college",
+        "rationale": "An overlooked but consequential bloc in the rural South and Black Belt. Their political weight can be felt in tight races across Georgia, North Carolina, Alabama, and Mississippi.",
+        "all_americans": {
+          "current": 25.5,
+          "prior": 29.7
+        },
+        "with_view": {
+          "current": 29.8,
+          "prior": 38.6
+        }
+      }
+    ],
+    "less_involved": [
+      {
+        "key": "soccer_moms",
+        "label": "Soccer Moms",
+        "subtitle": "Female, Suburban, College completed or Graduate degree, White",
+        "rationale": "The single most-watched voter group in American politics since the 1990s. Swung toward Democrats in 2018/2020, shifted back in parts of 2024. Their education level, suburban geography, and sensitivity to tone/culture-war issues make them the ultimate bellwether for competitive House and Senate races nationwide.",
+        "all_americans": {
+          "current": 28.8,
+          "prior": 27.1
+        },
+        "with_view": {
+          "current": 32.3,
+          "prior": 32.9
+        }
+      },
+      {
+        "key": "white_working_class",
+        "label": "White Working Class",
+        "subtitle": "White, No college",
+        "rationale": "The realignment story of the last decade. This group's shift from Obama to Trump remade the electoral map. Any erosion or consolidation in this bloc makes front-page news because it directly determines outcomes in PA, MI, WI, and Sun Belt exurbs.",
+        "all_americans": {
+          "current": 28.1,
+          "prior": 25.4
+        },
+        "with_view": {
+          "current": 32.4,
+          "prior": 30.4
+        }
+      },
+      {
+        "key": "barstool_conservatives",
+        "label": "Barstool Conservatives",
+        "subtitle": "Male, Gen X or Millennials, No college or College completed, Republican or Other party",
+        "rationale": "Culturally conservative but socially libertarian \u2014 anti-woke but pro-choice, pro-legal weed, pro-gambling. Credited with helping propel Trump to victory in 2024 through alternative media (Rogan, Barstool Sports, UFC). Not church-right but vibes-right. Their turnout and enthusiasm is a leading indicator of populist energy, and both parties are now scrambling to understand them.",
+        "all_americans": {
+          "current": 23.1,
+          "prior": 25.6
+        },
+        "with_view": {
+          "current": 25.7,
+          "prior": 28.6
+        }
+      },
+      {
+        "key": "disaffected_young_men",
+        "label": "Disaffected Young Men",
+        "subtitle": "Male, Gen Z or Millennials, Other party affiliation",
+        "rationale": "The emerging wildcard of American elections. Low-propensity, politically homeless, over-indexed on alternative media. Both parties competing for them. Their turnout alone can shift margins by 2-4 points in swing states.",
+        "all_americans": {
+          "current": 27.4,
+          "prior": 30.6
+        },
+        "with_view": {
+          "current": 31,
+          "prior": 34.9
+        }
+      },
+      {
+        "key": "black_church_women",
+        "label": "Black Women of Faith",
+        "subtitle": "Female, Black, Protestant, Democrat",
+        "rationale": "The most reliable voting bloc in the Democratic coalition. When their turnout dips even slightly, Democrats lose. Media tracks their enthusiasm as a proxy for the health of the entire Democratic operation.",
+        "all_americans": {
+          "current": 46.6,
+          "prior": 34.8
+        },
+        "with_view": {
+          "current": 52.3,
+          "prior": 45.6
+        }
+      },
+      {
+        "key": "hispanic_working_class_men",
+        "label": "Hispanic Working Class",
+        "subtitle": "Male, Hispanic, No college",
+        "rationale": "The fastest-moving demographic in American politics. Their rightward shift in 2020 and 2024 caught both parties off guard. This group's trajectory determines whether the Sun Belt stays competitive or locks in for one party.",
+        "all_americans": {
+          "current": 37.3,
+          "prior": 26.6
+        },
+        "with_view": {
+          "current": 42.1,
+          "prior": 30.4
+        }
+      },
+      {
+        "key": "evangelical_republicans",
+        "label": "Evangelical Republicans",
+        "subtitle": "Republican, Protestant",
+        "rationale": "The floor of the Republican coalition. Their mobilization determines whether GOP candidates hit their targets in virtually every state. Post-Dobbs, media watches whether this group stays energized or fractures over candidate quality.",
+        "all_americans": {
+          "current": 17.9,
+          "prior": 20.9
+        },
+        "with_view": {
+          "current": 19.5,
+          "prior": 23.8
+        }
+      },
+      {
+        "key": "rural_red_wall",
+        "label": "MAGA Country",
+        "subtitle": "Rural, Republican, White, No college",
+        "rationale": "The margin machine for Republicans. Their ever-increasing turnout in non-metro areas offsets Democratic gains in suburbs. Media covers them as the cultural heartbeat of the populist right. Any sign of turnout fatigue here is a major story.",
+        "all_americans": {
+          "current": 19.7,
+          "prior": 20.9
+        },
+        "with_view": {
+          "current": 22.3,
+          "prior": 24.5
+        }
+      },
+      {
+        "key": "genz_progressives",
+        "label": "TikTok Left",
+        "subtitle": "Gen Z, Democrat",
+        "rationale": "The energy wing of the Democratic base. Their enthusiasm on climate, student debt, and social issues translates to volunteer hours, small-dollar donations, and turnout in college towns. When disengaged, Democratic margins collapse.",
+        "all_americans": {
+          "current": 43.8,
+          "prior": 31.5
+        },
+        "with_view": {
+          "current": 48.1,
+          "prior": 37.9
+        }
+      },
+      {
+        "key": "swing_moderates",
+        "label": "Costco Centrists",
+        "subtitle": "Suburban, Other party affiliation",
+        "rationale": "The persuadable middle that both parties need. Not ideological, but they vote. Media uses them as the 'normal person' stand-in \u2014 decides based on gas prices, grocery costs, and vibes, not policy papers.",
+        "all_americans": {
+          "current": 28.7,
+          "prior": 29.8
+        },
+        "with_view": {
+          "current": 33.6,
+          "prior": 36
+        }
+      },
+      {
+        "key": "tradwifes",
+        "label": "Tradwifes",
+        "subtitle": "Female, Millennials or Gen Z, Republican, Protestant or Catholic, Suburban or Rural",
+        "rationale": "A culturally ascendant archetype driven by social media. Embraces traditional gender roles, homemaking aesthetics, and conservative family values. Gained massive visibility in 2024 as a cultural counterpoint to progressive feminism. Media watches them because the tradwife trend was seen as a leading indicator of Trump's win among white women.",
+        "all_americans": {
+          "current": 23.7,
+          "prior": 24.1
+        },
+        "with_view": {
+          "current": 26.7,
+          "prior": 28.5
+        }
+      },
+      {
+        "key": "black_genz_men",
+        "label": "Young Black Men",
+        "subtitle": "Male, Black, Gen Z",
+        "rationale": "A small but symbolically enormous group. Any movement away from Democrats gets massive media coverage because it threatens a core assumption of the Democratic coalition. Even marginal shifts carry outsize narrative weight.",
+        "all_americans": {
+          "current": 38.6,
+          "prior": 34.5
+        },
+        "with_view": {
+          "current": 42.2,
+          "prior": 40.7
+        }
+      },
+      {
+        "key": "rich_suburb_republicans",
+        "label": "Country Club Republicans",
+        "subtitle": "Republican, Suburban, Rich (125k+), College completed or Graduate degree",
+        "rationale": "The Republican voters most likely to defect on candidate quality. Their movement in wealthy suburbs (Bucks County, Maricopa, Gwinnett) decided multiple swing states. If they hold for the GOP, the party is strong.",
+        "all_americans": {
+          "current": 19.3,
+          "prior": 21.4
+        },
+        "with_view": {
+          "current": 20.7,
+          "prior": 24.4
+        }
+      },
+      {
+        "key": "college_town_liberals",
+        "label": "Latte Liberals",
+        "subtitle": "Democrat, Urban, Graduate/professional degree",
+        "rationale": "The ideological anchor of the Democratic Party. Highly engaged, high-turnout, and the source of most progressive policy energy. When fired up, Democratic campaigns have money and volunteers.",
+        "all_americans": {
+          "current": 40.2,
+          "prior": 31.8
+        },
+        "with_view": {
+          "current": 44.3,
+          "prior": 38.6
+        }
+      },
+      {
+        "key": "latina_suburban_moms",
+        "label": "Hispanic Soccer Moms",
+        "subtitle": "Female, Hispanic, Suburban, College completed",
+        "rationale": "An emerging swing bloc. More moderate than progressive activists, more engaged than working-class Hispanic men. As Sun Belt suburbs diversify, this group increasingly determines outcomes in AZ, NV, and TX.",
+        "all_americans": {
+          "current": 41.8,
+          "prior": 28.8
+        },
+        "with_view": {
+          "current": 46.9,
+          "prior": 34.7
+        }
+      },
+      {
+        "key": "young_crypto_libertarians",
+        "label": "Tech Bros",
+        "subtitle": "Male, Gen Z or Millennials, Other party affiliation, Above median or Rich income",
+        "rationale": "A new force in campaign finance and online discourse. Mobilized around deregulation, crypto, and anti-establishment messaging. Their money and meme energy can shift narratives quickly.",
+        "all_americans": {
+          "current": 27.3,
+          "prior": 30.5
+        },
+        "with_view": {
+          "current": 30.4,
+          "prior": 34.8
+        }
+      },
+      {
+        "key": "catholic_swing_voters",
+        "label": "Kennedy Catholics",
+        "subtitle": "Catholic, Suburban or Urban",
+        "rationale": "The original swing demographic in American politics. White Catholics lean R, Hispanic Catholics are contested. Cross-pressured on abortion, immigration, and social welfare. Distributed across every swing state.",
+        "all_americans": {
+          "current": 32.3,
+          "prior": 27.2
+        },
+        "with_view": {
+          "current": 35.8,
+          "prior": 31.8
+        }
+      },
+      {
+        "key": "non_college_conservative_women",
+        "label": "Red State Women",
+        "subtitle": "Female, White, No college, Republican, Suburban or Rural",
+        "rationale": "Often overlooked in media's focus on college-educated suburban women. They are a massive and growing part of the Republican base. Their concerns \u2014 inflation, safety, family affordability \u2014 drive GOP messaging. Trump gained among them in 2024.",
+        "all_americans": {
+          "current": 22.5,
+          "prior": 22.3
+        },
+        "with_view": {
+          "current": 26.2,
+          "prior": 27.3
+        }
+      },
+      {
+        "key": "boomer_democrats",
+        "label": "Boomer Democrats",
+        "subtitle": "Boomers+, Democrat, College completed or Graduate degree",
+        "rationale": "The reliable turnout machine of the Democratic Party \u2014 they actually show up in midterms. Often overlooked for flashier demographics, but their consistency keeps Democrats competitive in off-year elections.",
+        "all_americans": {
+          "current": 33.3,
+          "prior": 29.1
+        },
+        "with_view": {
+          "current": 35.6,
+          "prior": 33.8
+        }
+      },
+      {
+        "key": "blue_collar_men",
+        "label": "Blue-Collar Men",
+        "subtitle": "Male, White, No college, Poor or Below median income, Suburban or Rural",
+        "rationale": "The kitchen-table economics voter. Cares about wages, trade, and cost of living more than culture war. Overlaps with but is distinct from Barstool Conservatives \u2014 these guys are family-first, not libertine. Their economic anxiety is a recurring media theme.",
+        "all_americans": {
+          "current": 22.8,
+          "prior": 23.2
+        },
+        "with_view": {
+          "current": 26.1,
+          "prior": 26.2
+        }
+      },
+      {
+        "key": "genx_forgotten_middle",
+        "label": "GenX Forgotten Middle",
+        "subtitle": "GenX, Other party affiliation, Suburban",
+        "rationale": "Perpetually overlooked in media that ping-pongs between Boomers and Gen Z. But GenX is in peak earning and voting years, and their independent streak makes them genuinely persuadable.",
+        "all_americans": {
+          "current": 30.4,
+          "prior": 30.6
+        },
+        "with_view": {
+          "current": 36.5,
+          "prior": 38.1
+        }
+      },
+      {
+        "key": "secular_suburbanites",
+        "label": "Secular Suburbanites",
+        "subtitle": "Suburban, Not religious, College completed or Graduate degree",
+        "rationale": "The fastest-growing religious demographic is no religion at all. As 'nones' concentrate in suburbs, they look like a coherent voting bloc \u2014 socially liberal, fiscally moderate, allergic to culture-war messaging.",
+        "all_americans": {
+          "current": 31.4,
+          "prior": 29
+        },
+        "with_view": {
+          "current": 34.9,
+          "prior": 34.8
+        }
+      },
+      {
+        "key": "poor_rural_democrats",
+        "label": "Poor Rural Democrats",
+        "subtitle": "Democrat, Rural, Poor (<35k)",
+        "rationale": "A shrinking but real constituency \u2014 complicates the narrative that rural = Republican. Concentrated in the Deep South Black Belt, Appalachian pockets, and Native communities. Mobilization matters in close Senate races.",
+        "all_americans": {
+          "current": 39.7,
+          "prior": 27.9
+        },
+        "with_view": {
+          "current": 45.1,
+          "prior": 34.4
+        }
+      },
+      {
+        "key": "wealthy_urban_progressives",
+        "label": "Six-Figure Socialists",
+        "subtitle": "Democrat, Urban, Rich (125k+), Graduate/professional degree",
+        "rationale": "The fundraising engine of the progressive movement. Their policy preferences drive Democratic platform priorities disproportionately. Their disconnect from working-class voters is itself a recurring story.",
+        "all_americans": {
+          "current": 40.5,
+          "prior": 32
+        },
+        "with_view": {
+          "current": 44.1,
+          "prior": 38.8
+        }
+      },
+      {
+        "key": "black_rural_working_class",
+        "label": "Black Rural Working Class",
+        "subtitle": "Black - rural - no college",
+        "rationale": "An overlooked but consequential bloc in the rural South and Black Belt. Their political weight can be felt in tight races across Georgia, North Carolina, Alabama, and Mississippi.",
+        "all_americans": {
+          "current": 41.1,
+          "prior": 30.7
+        },
+        "with_view": {
+          "current": 47.9,
+          "prior": 39.8
+        }
+      }
+    ],
+    "diplomacy_plus_less_involved_norm": [
+      {
+        "key": "soccer_moms",
+        "label": "Soccer Moms",
+        "subtitle": "Female, Suburban, College completed or Graduate degree, White",
+        "rationale": "The single most-watched voter group in American politics since the 1990s. Swung toward Democrats in 2018/2020, shifted back in parts of 2024. Their education level, suburban geography, and sensitivity to tone/culture-war issues make them the ultimate bellwether for competitive House and Senate races nationwide.",
+        "all_americans": {
+          "current": 52.1,
+          "prior": 57.3
+        },
+        "with_view": {
+          "current": 58.3,
+          "prior": 69.4
+        }
+      },
+      {
+        "key": "white_working_class",
+        "label": "White Working Class",
+        "subtitle": "White, No college",
+        "rationale": "The realignment story of the last decade. This group's shift from Obama to Trump remade the electoral map. Any erosion or consolidation in this bloc makes front-page news because it directly determines outcomes in PA, MI, WI, and Sun Belt exurbs.",
+        "all_americans": {
+          "current": 49.2,
+          "prior": 55.1
+        },
+        "with_view": {
+          "current": 56.7,
+          "prior": 66
+        }
+      },
+      {
+        "key": "barstool_conservatives",
+        "label": "Barstool Conservatives",
+        "subtitle": "Male, Gen X or Millennials, No college or College completed, Republican or Other party",
+        "rationale": "Culturally conservative but socially libertarian \u2014 anti-woke but pro-choice, pro-legal weed, pro-gambling. Credited with helping propel Trump to victory in 2024 through alternative media (Rogan, Barstool Sports, UFC). Not church-right but vibes-right. Their turnout and enthusiasm is a leading indicator of populist energy, and both parties are now scrambling to understand them.",
+        "all_americans": {
+          "current": 47,
+          "prior": 53.6
+        },
+        "with_view": {
+          "current": 52.4,
+          "prior": 60.1
+        }
+      },
+      {
+        "key": "disaffected_young_men",
+        "label": "Disaffected Young Men",
+        "subtitle": "Male, Gen Z or Millennials, Other party affiliation",
+        "rationale": "The emerging wildcard of American elections. Low-propensity, politically homeless, over-indexed on alternative media. Both parties competing for them. Their turnout alone can shift margins by 2-4 points in swing states.",
+        "all_americans": {
+          "current": 54.5,
+          "prior": 59
+        },
+        "with_view": {
+          "current": 61.8,
+          "prior": 67.2
+        }
+      },
+      {
+        "key": "black_church_women",
+        "label": "Black Women of Faith",
+        "subtitle": "Female, Black, Protestant, Democrat",
+        "rationale": "The most reliable voting bloc in the Democratic coalition. When their turnout dips even slightly, Democrats lose. Media tracks their enthusiasm as a proxy for the health of the entire Democratic operation.",
+        "all_americans": {
+          "current": 76.4,
+          "prior": 64.5
+        },
+        "with_view": {
+          "current": 85.7,
+          "prior": 84.6
+        }
+      },
+      {
+        "key": "hispanic_working_class_men",
+        "label": "Hispanic Working Class",
+        "subtitle": "Male, Hispanic, No college",
+        "rationale": "The fastest-moving demographic in American politics. Their rightward shift in 2020 and 2024 caught both parties off guard. This group's trajectory determines whether the Sun Belt stays competitive or locks in for one party.",
+        "all_americans": {
+          "current": 64.7,
+          "prior": 61.6
+        },
+        "with_view": {
+          "current": 73,
+          "prior": 70.3
+        }
+      },
+      {
+        "key": "evangelical_republicans",
+        "label": "Evangelical Republicans",
+        "subtitle": "Republican, Protestant",
+        "rationale": "The floor of the Republican coalition. Their mobilization determines whether GOP candidates hit their targets in virtually every state. Post-Dobbs, media watches whether this group stays energized or fractures over candidate quality.",
+        "all_americans": {
+          "current": 36.4,
+          "prior": 49.4
+        },
+        "with_view": {
+          "current": 39.7,
+          "prior": 56.3
+        }
+      },
+      {
+        "key": "rural_red_wall",
+        "label": "MAGA Country",
+        "subtitle": "Rural, Republican, White, No college",
+        "rationale": "The margin machine for Republicans. Their ever-increasing turnout in non-metro areas offsets Democratic gains in suburbs. Media covers them as the cultural heartbeat of the populist right. Any sign of turnout fatigue here is a major story.",
+        "all_americans": {
+          "current": 35.3,
+          "prior": 47.9
+        },
+        "with_view": {
+          "current": 40,
+          "prior": 56.1
+        }
+      },
+      {
+        "key": "genz_progressives",
+        "label": "TikTok Left",
+        "subtitle": "Gen Z, Democrat",
+        "rationale": "The energy wing of the Democratic base. Their enthusiasm on climate, student debt, and social issues translates to volunteer hours, small-dollar donations, and turnout in college towns. When disengaged, Democratic margins collapse.",
+        "all_americans": {
+          "current": 76.2,
+          "prior": 66.8
+        },
+        "with_view": {
+          "current": 83.7,
+          "prior": 80.5
+        }
+      },
+      {
+        "key": "swing_moderates",
+        "label": "Costco Centrists",
+        "subtitle": "Suburban, Other party affiliation",
+        "rationale": "The persuadable middle that both parties need. Not ideological, but they vote. Media uses them as the 'normal person' stand-in \u2014 decides based on gas prices, grocery costs, and vibes, not policy papers.",
+        "all_americans": {
+          "current": 52.4,
+          "prior": 57.3
+        },
+        "with_view": {
+          "current": 61.2,
+          "prior": 69.2
+        }
+      },
+      {
+        "key": "tradwifes",
+        "label": "Tradwifes",
+        "subtitle": "Female, Millennials or Gen Z, Republican, Protestant or Catholic, Suburban or Rural",
+        "rationale": "A culturally ascendant archetype driven by social media. Embraces traditional gender roles, homemaking aesthetics, and conservative family values. Gained massive visibility in 2024 as a cultural counterpoint to progressive feminism. Media watches them because the tradwife trend was seen as a leading indicator of Trump's win among white women.",
+        "all_americans": {
+          "current": 39.5,
+          "prior": 50.9
+        },
+        "with_view": {
+          "current": 44.3,
+          "prior": 60.3
+        }
+      },
+      {
+        "key": "black_genz_men",
+        "label": "Young Black Men",
+        "subtitle": "Male, Black, Gen Z",
+        "rationale": "A small but symbolically enormous group. Any movement away from Democrats gets massive media coverage because it threatens a core assumption of the Democratic coalition. Even marginal shifts carry outsize narrative weight.",
+        "all_americans": {
+          "current": 75.2,
+          "prior": 66.3
+        },
+        "with_view": {
+          "current": 82.3,
+          "prior": 78.1
+        }
+      },
+      {
+        "key": "rich_suburb_republicans",
+        "label": "Country Club Republicans",
+        "subtitle": "Republican, Suburban, Rich (125k+), College completed or Graduate degree",
+        "rationale": "The Republican voters most likely to defect on candidate quality. Their movement in wealthy suburbs (Bucks County, Maricopa, Gwinnett) decided multiple swing states. If they hold for the GOP, the party is strong.",
+        "all_americans": {
+          "current": 42,
+          "prior": 47.9
+        },
+        "with_view": {
+          "current": 44.9,
+          "prior": 54.6
+        }
+      },
+      {
+        "key": "college_town_liberals",
+        "label": "Latte Liberals",
+        "subtitle": "Democrat, Urban, Graduate/professional degree",
+        "rationale": "The ideological anchor of the Democratic Party. Highly engaged, high-turnout, and the source of most progressive policy energy. When fired up, Democratic campaigns have money and volunteers.",
+        "all_americans": {
+          "current": 72.6,
+          "prior": 67.3
+        },
+        "with_view": {
+          "current": 80.1,
+          "prior": 81.6
+        }
+      },
+      {
+        "key": "latina_suburban_moms",
+        "label": "Hispanic Soccer Moms",
+        "subtitle": "Female, Hispanic, Suburban, College completed",
+        "rationale": "An emerging swing bloc. More moderate than progressive activists, more engaged than working-class Hispanic men. As Sun Belt suburbs diversify, this group increasingly determines outcomes in AZ, NV, and TX.",
+        "all_americans": {
+          "current": 67.7,
+          "prior": 61.7
+        },
+        "with_view": {
+          "current": 75.9,
+          "prior": 74.3
+        }
+      },
+      {
+        "key": "young_crypto_libertarians",
+        "label": "Tech Bros",
+        "subtitle": "Male, Gen Z or Millennials, Other party affiliation, Above median or Rich income",
+        "rationale": "A new force in campaign finance and online discourse. Mobilized around deregulation, crypto, and anti-establishment messaging. Their money and meme energy can shift narratives quickly.",
+        "all_americans": {
+          "current": 55.4,
+          "prior": 58.6
+        },
+        "with_view": {
+          "current": 61.8,
+          "prior": 66.7
+        }
+      },
+      {
+        "key": "catholic_swing_voters",
+        "label": "Kennedy Catholics",
+        "subtitle": "Catholic, Suburban or Urban",
+        "rationale": "The original swing demographic in American politics. White Catholics lean R, Hispanic Catholics are contested. Cross-pressured on abortion, immigration, and social welfare. Distributed across every swing state.",
+        "all_americans": {
+          "current": 60.3,
+          "prior": 59.8
+        },
+        "with_view": {
+          "current": 67,
+          "prior": 69.9
+        }
+      },
+      {
+        "key": "non_college_conservative_women",
+        "label": "Red State Women",
+        "subtitle": "Female, White, No college, Republican, Suburban or Rural",
+        "rationale": "Often overlooked in media's focus on college-educated suburban women. They are a massive and growing part of the Republican base. Their concerns \u2014 inflation, safety, family affordability \u2014 drive GOP messaging. Trump gained among them in 2024.",
+        "all_americans": {
+          "current": 36.7,
+          "prior": 48.8
+        },
+        "with_view": {
+          "current": 42.5,
+          "prior": 59.8
+        }
+      },
+      {
+        "key": "boomer_democrats",
+        "label": "Boomer Democrats",
+        "subtitle": "Boomers+, Democrat, College completed or Graduate degree",
+        "rationale": "The reliable turnout machine of the Democratic Party \u2014 they actually show up in midterms. Often overlooked for flashier demographics, but their consistency keeps Democrats competitive in off-year elections.",
+        "all_americans": {
+          "current": 75.4,
+          "prior": 72.9
+        },
+        "with_view": {
+          "current": 80.6,
+          "prior": 84.7
+        }
+      },
+      {
+        "key": "blue_collar_men",
+        "label": "Blue-Collar Men",
+        "subtitle": "Male, White, No college, Poor or Below median income, Suburban or Rural",
+        "rationale": "The kitchen-table economics voter. Cares about wages, trade, and cost of living more than culture war. Overlaps with but is distinct from Barstool Conservatives \u2014 these guys are family-first, not libertine. Their economic anxiety is a recurring media theme.",
+        "all_americans": {
+          "current": 43.9,
+          "prior": 54.1
+        },
+        "with_view": {
+          "current": 50.5,
+          "prior": 61.1
+        }
+      },
+      {
+        "key": "genx_forgotten_middle",
+        "label": "GenX Forgotten Middle",
+        "subtitle": "GenX, Other party affiliation, Suburban",
+        "rationale": "Perpetually overlooked in media that ping-pongs between Boomers and Gen Z. But GenX is in peak earning and voting years, and their independent streak makes them genuinely persuadable.",
+        "all_americans": {
+          "current": 52.2,
+          "prior": 56.4
+        },
+        "with_view": {
+          "current": 62.6,
+          "prior": 70.2
+        }
+      },
+      {
+        "key": "secular_suburbanites",
+        "label": "Secular Suburbanites",
+        "subtitle": "Suburban, Not religious, College completed or Graduate degree",
+        "rationale": "The fastest-growing religious demographic is no religion at all. As 'nones' concentrate in suburbs, they look like a coherent voting bloc \u2014 socially liberal, fiscally moderate, allergic to culture-war messaging.",
+        "all_americans": {
+          "current": 60.4,
+          "prior": 59.1
+        },
+        "with_view": {
+          "current": 67.1,
+          "prior": 70.9
+        }
+      },
+      {
+        "key": "poor_rural_democrats",
+        "label": "Poor Rural Democrats",
+        "subtitle": "Democrat, Rural, Poor (<35k)",
+        "rationale": "A shrinking but real constituency \u2014 complicates the narrative that rural = Republican. Concentrated in the Deep South Black Belt, Appalachian pockets, and Native communities. Mobilization matters in close Senate races.",
+        "all_americans": {
+          "current": 70.4,
+          "prior": 65.5
+        },
+        "with_view": {
+          "current": 80,
+          "prior": 80.8
+        }
+      },
+      {
+        "key": "wealthy_urban_progressives",
+        "label": "Six-Figure Socialists",
+        "subtitle": "Democrat, Urban, Rich (125k+), Graduate/professional degree",
+        "rationale": "The fundraising engine of the progressive movement. Their policy preferences drive Democratic platform priorities disproportionately. Their disconnect from working-class voters is itself a recurring story.",
+        "all_americans": {
+          "current": 74.8,
+          "prior": 66.7
+        },
+        "with_view": {
+          "current": 81.3,
+          "prior": 80.9
+        }
+      },
+      {
+        "key": "black_rural_working_class",
+        "label": "Black Rural Working Class",
+        "subtitle": "Black - rural - no college",
+        "rationale": "An overlooked but consequential bloc in the rural South and Black Belt. Their political weight can be felt in tight races across Georgia, North Carolina, Alabama, and Mississippi.",
+        "all_americans": {
+          "current": 66.6,
+          "prior": 60.4
+        },
+        "with_view": {
+          "current": 77.6,
+          "prior": 78.5
+        }
+      }
+    ],
+    "unsure": [
+      {
+        "key": "soccer_moms",
+        "label": "Soccer Moms",
+        "subtitle": "Female, Suburban, College completed or Graduate degree, White",
+        "rationale": "The single most-watched voter group in American politics since the 1990s. Swung toward Democrats in 2018/2020, shifted back in parts of 2024. Their education level, suburban geography, and sensitivity to tone/culture-war issues make them the ultimate bellwether for competitive House and Senate races nationwide.",
+        "all_americans": {
+          "current": 10.6,
+          "prior": 17.5
+        },
+        "with_view": {
+          "current": null,
+          "prior": null
+        }
+      },
+      {
+        "key": "white_working_class",
+        "label": "White Working Class",
+        "subtitle": "White, No college",
+        "rationale": "The realignment story of the last decade. This group's shift from Obama to Trump remade the electoral map. Any erosion or consolidation in this bloc makes front-page news because it directly determines outcomes in PA, MI, WI, and Sun Belt exurbs.",
+        "all_americans": {
+          "current": 13.2,
+          "prior": 16.6
+        },
+        "with_view": {
+          "current": null,
+          "prior": null
+        }
+      },
+      {
+        "key": "barstool_conservatives",
+        "label": "Barstool Conservatives",
+        "subtitle": "Male, Gen X or Millennials, No college or College completed, Republican or Other party",
+        "rationale": "Culturally conservative but socially libertarian \u2014 anti-woke but pro-choice, pro-legal weed, pro-gambling. Credited with helping propel Trump to victory in 2024 through alternative media (Rogan, Barstool Sports, UFC). Not church-right but vibes-right. Their turnout and enthusiasm is a leading indicator of populist energy, and both parties are now scrambling to understand them.",
+        "all_americans": {
+          "current": 10.2,
+          "prior": 10.8
+        },
+        "with_view": {
+          "current": null,
+          "prior": null
+        }
+      },
+      {
+        "key": "disaffected_young_men",
+        "label": "Disaffected Young Men",
+        "subtitle": "Male, Gen Z or Millennials, Other party affiliation",
+        "rationale": "The emerging wildcard of American elections. Low-propensity, politically homeless, over-indexed on alternative media. Both parties competing for them. Their turnout alone can shift margins by 2-4 points in swing states.",
+        "all_americans": {
+          "current": 11.8,
+          "prior": 12.2
+        },
+        "with_view": {
+          "current": null,
+          "prior": null
+        }
+      },
+      {
+        "key": "black_church_women",
+        "label": "Black Women of Faith",
+        "subtitle": "Female, Black, Protestant, Democrat",
+        "rationale": "The most reliable voting bloc in the Democratic coalition. When their turnout dips even slightly, Democrats lose. Media tracks their enthusiasm as a proxy for the health of the entire Democratic operation.",
+        "all_americans": {
+          "current": 10.9,
+          "prior": 23.7
+        },
+        "with_view": {
+          "current": null,
+          "prior": null
+        }
+      },
+      {
+        "key": "hispanic_working_class_men",
+        "label": "Hispanic Working Class",
+        "subtitle": "Male, Hispanic, No college",
+        "rationale": "The fastest-moving demographic in American politics. Their rightward shift in 2020 and 2024 caught both parties off guard. This group's trajectory determines whether the Sun Belt stays competitive or locks in for one party.",
+        "all_americans": {
+          "current": 11.3,
+          "prior": 12.4
+        },
+        "with_view": {
+          "current": null,
+          "prior": null
+        }
+      },
+      {
+        "key": "evangelical_republicans",
+        "label": "Evangelical Republicans",
+        "subtitle": "Republican, Protestant",
+        "rationale": "The floor of the Republican coalition. Their mobilization determines whether GOP candidates hit their targets in virtually every state. Post-Dobbs, media watches whether this group stays energized or fractures over candidate quality.",
+        "all_americans": {
+          "current": 8.1,
+          "prior": 12.3
+        },
+        "with_view": {
+          "current": null,
+          "prior": null
+        }
+      },
+      {
+        "key": "rural_red_wall",
+        "label": "MAGA Country",
+        "subtitle": "Rural, Republican, White, No college",
+        "rationale": "The margin machine for Republicans. Their ever-increasing turnout in non-metro areas offsets Democratic gains in suburbs. Media covers them as the cultural heartbeat of the populist right. Any sign of turnout fatigue here is a major story.",
+        "all_americans": {
+          "current": 11.7,
+          "prior": 14.5
+        },
+        "with_view": {
+          "current": null,
+          "prior": null
+        }
+      },
+      {
+        "key": "genz_progressives",
+        "label": "TikTok Left",
+        "subtitle": "Gen Z, Democrat",
+        "rationale": "The energy wing of the Democratic base. Their enthusiasm on climate, student debt, and social issues translates to volunteer hours, small-dollar donations, and turnout in college towns. When disengaged, Democratic margins collapse.",
+        "all_americans": {
+          "current": 9,
+          "prior": 17
+        },
+        "with_view": {
+          "current": null,
+          "prior": null
+        }
+      },
+      {
+        "key": "swing_moderates",
+        "label": "Costco Centrists",
+        "subtitle": "Suburban, Other party affiliation",
+        "rationale": "The persuadable middle that both parties need. Not ideological, but they vote. Media uses them as the 'normal person' stand-in \u2014 decides based on gas prices, grocery costs, and vibes, not policy papers.",
+        "all_americans": {
+          "current": 14.3,
+          "prior": 17.2
+        },
+        "with_view": {
+          "current": null,
+          "prior": null
+        }
+      },
+      {
+        "key": "tradwifes",
+        "label": "Tradwifes",
+        "subtitle": "Female, Millennials or Gen Z, Republican, Protestant or Catholic, Suburban or Rural",
+        "rationale": "A culturally ascendant archetype driven by social media. Embraces traditional gender roles, homemaking aesthetics, and conservative family values. Gained massive visibility in 2024 as a cultural counterpoint to progressive feminism. Media watches them because the tradwife trend was seen as a leading indicator of Trump's win among white women.",
+        "all_americans": {
+          "current": 10.9,
+          "prior": 15.5
+        },
+        "with_view": {
+          "current": null,
+          "prior": null
+        }
+      },
+      {
+        "key": "black_genz_men",
+        "label": "Young Black Men",
+        "subtitle": "Male, Black, Gen Z",
+        "rationale": "A small but symbolically enormous group. Any movement away from Democrats gets massive media coverage because it threatens a core assumption of the Democratic coalition. Even marginal shifts carry outsize narrative weight.",
+        "all_americans": {
+          "current": 8.6,
+          "prior": 15.2
+        },
+        "with_view": {
+          "current": null,
+          "prior": null
+        }
+      },
+      {
+        "key": "rich_suburb_republicans",
+        "label": "Country Club Republicans",
+        "subtitle": "Republican, Suburban, Rich (125k+), College completed or Graduate degree",
+        "rationale": "The Republican voters most likely to defect on candidate quality. Their movement in wealthy suburbs (Bucks County, Maricopa, Gwinnett) decided multiple swing states. If they hold for the GOP, the party is strong.",
+        "all_americans": {
+          "current": 6.6,
+          "prior": 12.2
+        },
+        "with_view": {
+          "current": null,
+          "prior": null
+        }
+      },
+      {
+        "key": "college_town_liberals",
+        "label": "Latte Liberals",
+        "subtitle": "Democrat, Urban, Graduate/professional degree",
+        "rationale": "The ideological anchor of the Democratic Party. Highly engaged, high-turnout, and the source of most progressive policy energy. When fired up, Democratic campaigns have money and volunteers.",
+        "all_americans": {
+          "current": 9.4,
+          "prior": 17.5
+        },
+        "with_view": {
+          "current": null,
+          "prior": null
+        }
+      },
+      {
+        "key": "latina_suburban_moms",
+        "label": "Hispanic Soccer Moms",
+        "subtitle": "Female, Hispanic, Suburban, College completed",
+        "rationale": "An emerging swing bloc. More moderate than progressive activists, more engaged than working-class Hispanic men. As Sun Belt suburbs diversify, this group increasingly determines outcomes in AZ, NV, and TX.",
+        "all_americans": {
+          "current": 10.9,
+          "prior": 16.9
+        },
+        "with_view": {
+          "current": null,
+          "prior": null
+        }
+      },
+      {
+        "key": "young_crypto_libertarians",
+        "label": "Tech Bros",
+        "subtitle": "Male, Gen Z or Millennials, Other party affiliation, Above median or Rich income",
+        "rationale": "A new force in campaign finance and online discourse. Mobilized around deregulation, crypto, and anti-establishment messaging. Their money and meme energy can shift narratives quickly.",
+        "all_americans": {
+          "current": 10.3,
+          "prior": 12.1
+        },
+        "with_view": {
+          "current": null,
+          "prior": null
+        }
+      },
+      {
+        "key": "catholic_swing_voters",
+        "label": "Kennedy Catholics",
+        "subtitle": "Catholic, Suburban or Urban",
+        "rationale": "The original swing demographic in American politics. White Catholics lean R, Hispanic Catholics are contested. Cross-pressured on abortion, immigration, and social welfare. Distributed across every swing state.",
+        "all_americans": {
+          "current": 10,
+          "prior": 14.5
+        },
+        "with_view": {
+          "current": null,
+          "prior": null
+        }
+      },
+      {
+        "key": "non_college_conservative_women",
+        "label": "Red State Women",
+        "subtitle": "Female, White, No college, Republican, Suburban or Rural",
+        "rationale": "Often overlooked in media's focus on college-educated suburban women. They are a massive and growing part of the Republican base. Their concerns \u2014 inflation, safety, family affordability \u2014 drive GOP messaging. Trump gained among them in 2024.",
+        "all_americans": {
+          "current": 13.9,
+          "prior": 18.4
+        },
+        "with_view": {
+          "current": null,
+          "prior": null
+        }
+      },
+      {
+        "key": "boomer_democrats",
+        "label": "Boomer Democrats",
+        "subtitle": "Boomers+, Democrat, College completed or Graduate degree",
+        "rationale": "The reliable turnout machine of the Democratic Party \u2014 they actually show up in midterms. Often overlooked for flashier demographics, but their consistency keeps Democrats competitive in off-year elections.",
+        "all_americans": {
+          "current": 6.4,
+          "prior": 14
+        },
+        "with_view": {
+          "current": null,
+          "prior": null
+        }
+      },
+      {
+        "key": "blue_collar_men",
+        "label": "Blue-Collar Men",
+        "subtitle": "Male, White, No college, Poor or Below median income, Suburban or Rural",
+        "rationale": "The kitchen-table economics voter. Cares about wages, trade, and cost of living more than culture war. Overlaps with but is distinct from Barstool Conservatives \u2014 these guys are family-first, not libertine. Their economic anxiety is a recurring media theme.",
+        "all_americans": {
+          "current": 13,
+          "prior": 11.5
+        },
+        "with_view": {
+          "current": null,
+          "prior": null
+        }
+      },
+      {
+        "key": "genx_forgotten_middle",
+        "label": "GenX Forgotten Middle",
+        "subtitle": "GenX, Other party affiliation, Suburban",
+        "rationale": "Perpetually overlooked in media that ping-pongs between Boomers and Gen Z. But GenX is in peak earning and voting years, and their independent streak makes them genuinely persuadable.",
+        "all_americans": {
+          "current": 16.7,
+          "prior": 19.6
+        },
+        "with_view": {
+          "current": null,
+          "prior": null
+        }
+      },
+      {
+        "key": "secular_suburbanites",
+        "label": "Secular Suburbanites",
+        "subtitle": "Suburban, Not religious, College completed or Graduate degree",
+        "rationale": "The fastest-growing religious demographic is no religion at all. As 'nones' concentrate in suburbs, they look like a coherent voting bloc \u2014 socially liberal, fiscally moderate, allergic to culture-war messaging.",
+        "all_americans": {
+          "current": 10,
+          "prior": 16.7
+        },
+        "with_view": {
+          "current": null,
+          "prior": null
+        }
+      },
+      {
+        "key": "poor_rural_democrats",
+        "label": "Poor Rural Democrats",
+        "subtitle": "Democrat, Rural, Poor (<35k)",
+        "rationale": "A shrinking but real constituency \u2014 complicates the narrative that rural = Republican. Concentrated in the Deep South Black Belt, Appalachian pockets, and Native communities. Mobilization matters in close Senate races.",
+        "all_americans": {
+          "current": 12,
+          "prior": 19
+        },
+        "with_view": {
+          "current": null,
+          "prior": null
+        }
+      },
+      {
+        "key": "wealthy_urban_progressives",
+        "label": "Six-Figure Socialists",
+        "subtitle": "Democrat, Urban, Rich (125k+), Graduate/professional degree",
+        "rationale": "The fundraising engine of the progressive movement. Their policy preferences drive Democratic platform priorities disproportionately. Their disconnect from working-class voters is itself a recurring story.",
+        "all_americans": {
+          "current": 8.1,
+          "prior": 17.5
+        },
+        "with_view": {
+          "current": null,
+          "prior": null
+        }
+      },
+      {
+        "key": "black_rural_working_class",
+        "label": "Black Rural Working Class",
+        "subtitle": "Black - rural - no college",
+        "rationale": "An overlooked but consequential bloc in the rural South and Black Belt. Their political weight can be felt in tight races across Georgia, North Carolina, Alabama, and Mississippi.",
+        "all_americans": {
+          "current": 14.2,
+          "prior": 23
+        },
+        "with_view": {
+          "current": null,
+          "prior": null
+        }
+      }
+    ]
+  }
+}
