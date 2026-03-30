@@ -180,7 +180,34 @@ document.documentElement.style.colorScheme = resolvedTheme === 'dark' ? 'dark' :
 
 If upstream refresh overwrites these lines, re-apply them in the copied `index.html`.
 
-### 6.9 Verification Checklist For Iran Card Embeds
+### 6.9 Medium-Width Overflow / Right-Edge Clipping Fix
+
+In embed mode, Demographics and Archetypes can be clipped on the right edge at medium iframe widths
+(for example around ~760–840px in blog layouts) if controls/bars force horizontal overflow.
+
+Fixes applied in `public/iran_policy/standalone_website/index.html`:
+
+```css
+.layout { grid-template-columns: minmax(0, 1fr); }
+.card { min-width: 0; }
+```
+
+```css
+.embed-component-mode .xt-controls { flex-direction: column; align-items: stretch; }
+.embed-component-mode .xt-control-group { min-width: 0; }
+.embed-component-mode .xt-select { min-width: 0; width: 100%; max-width: 100%; }
+```
+
+```css
+@media (max-width: 820px) {
+  .embed-component-mode .bar-row  { grid-template-columns: minmax(90px, 8.5rem) minmax(0, 1fr) 66px; }
+  .embed-component-mode .mini-bar { grid-template-columns: 40px minmax(0, 1fr) 66px; }
+}
+```
+
+If upstream refresh overwrites these lines, re-apply them in the copied `index.html`.
+
+### 6.10 Verification Checklist For Iran Card Embeds
 
 - Card style matches Iran standalone website.
 - Interactions render correctly in iframe.
@@ -189,6 +216,7 @@ If upstream refresh overwrites these lines, re-apply them in the copied `index.h
 - No edits were made in `vantage_special_analysis/build_section`.
 - Cards have no black box around them in either light or dark mode.
 - Cards switch to dark styling when the blog page is switched to dark mode.
+- Demographics and Archetypes cards are not cut off on the right side in blog embeds.
 
 ## 7. Agent Handoff Expectations
 
