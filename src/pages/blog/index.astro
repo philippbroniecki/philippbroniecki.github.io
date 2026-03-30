@@ -7,11 +7,11 @@ const posts = (await getCollection('blog'))
   .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 ---
 
-<BaseLayout title="Blog – Philipp Broniecki" description="Posts on data science, polling, methodology, and more.">
+<BaseLayout title="Blog – Philipp Broniecki" description="Posts on U.S. public opinion, data science, polling, and methodology.">
   <div class="blog-hero">
     <div class="container">
-      <h1>Blog</h1>
-      <p class="subtitle">Notes on data science, polling, and methodology</p>
+      <h1>My blog – Mostly Noise</h1>
+      <p class="subtitle">U.S. public opinion, data science, polling, and methodology</p>
     </div>
   </div>
   <div class="container blog-list">

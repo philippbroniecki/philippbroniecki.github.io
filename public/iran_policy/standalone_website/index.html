@@ -244,6 +244,7 @@ body {
   margin: 0 auto;
   padding: 1.4rem 1.6rem 4rem;
   display: grid;
+  grid-template-columns: minmax(0, 1fr);
   gap: 1.35rem;
 }
 
@@ -291,6 +292,7 @@ body {
   border-radius: var(--r-lg);
   box-shadow: var(--shadow-card);
   padding: 1.5rem 1.7rem;
+  min-width: 0;
   max-width: 100%;
   transition:
     background-color 280ms ease,
@@ -1033,6 +1035,18 @@ body {
   gap: 0.22rem;
 }
 
+/* In iframe card mode, constrain controls to the available width.
+   Long option labels can otherwise force horizontal overflow. */
+.embed-component-mode .xt-controls {
+  flex-direction: column;
+  align-items: stretch;
+  gap: 0.5rem;
+}
+
+.embed-component-mode .xt-control-group {
+  min-width: 0;
+}
+
 .xt-control-label {
   font-size: 0.63rem;
   font-weight: 800;
@@ -1058,6 +1072,12 @@ body {
   cursor: pointer;
   min-width: 140px;
   transition: background-color 200ms ease, border-color 200ms ease, color 200ms ease;
+}
+
+.embed-component-mode .xt-select {
+  min-width: 0;
+  width: 100%;
+  max-width: 100%;
 }
 
 .xt-select:hover { border-color: var(--accent); }
@@ -1303,6 +1323,27 @@ body {
   .summary-grid {
     grid-template-columns: 1fr;
   }
+}
+
+/* Embed cards often render inside narrower blog columns; switch to
+   compact bar/value widths earlier so the right-side values stay visible. */
+@media (max-width: 820px) {
+  .embed-component-mode .card {
+    padding: 1.15rem 1.2rem;
+  }
+
+  .embed-component-mode .bar-row {
+    grid-template-columns: minmax(90px, 8.5rem) minmax(0, 1fr) 66px;
+    gap: 0.48rem;
+  }
+
+  .embed-component-mode .mini-bar {
+    grid-template-columns: 40px minmax(0, 1fr) 66px;
+    gap: 0.38rem;
+  }
+
+  .embed-component-mode .value-main { font-size: 0.74rem; }
+  .embed-component-mode .delta-value { font-size: 0.67rem; }
 }
 
 @media (max-width: 680px) {
